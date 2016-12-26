@@ -1,39 +1,141 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@font-face {
+  font-family: 'Barkentina';
+  src: local("Barkentina 1"), url("../fonts/barkentina1.woff2") format("woff2"), url("../fonts/barkentina1.woff") format("woff"), url("../fonts/barkentina1.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'AMG Anahit';
+  src: local("AMG Anahit Semi Serif"), url("../fonts/amganahitsemiserif.woff2") format("woff2"), url("../fonts/amganahitsemiserif.woff") format("woff"), url("../fonts/amganahitsemiserif.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: "AMG Anahit"; }
 
-.col-md-4 {
-  float: left;
-  width: 33.333333333%;
-  text-align: center; }
-
-.container {
-  margin-top: 20px; }
+.navbar.navbar-default.navbar-fixed-top {
+  background: -webkit-linear-gradient(bottom, #f6d1ef, #f5eaf1);
+  background: linear-gradient(to top, #f6d1ef, #f5eaf1); }
 
 nav {
   width: 100%;
-  padding-top: 40px;
-  height: 100px; }
+  padding-top: 30px;
+  height: 80px;
+  margin-right: 70px; }
   nav .navbar-header {
     display: inline-block; }
     nav .navbar-header .logo__img {
-      margin-top: -50px;
-      width: 80px; }
+      margin-top: -45px;
+      width: 100px;
+      margin-left: 80px; }
       nav .navbar-header .logo__img:hover {
         cursor: pointer; }
   nav .navbar-collapse {
     height: 50px; }
     nav .navbar-collapse .nav {
-      margin-top: -15px; }
+      margin-top: -15px;
+      margin-right: 80px; }
     nav .navbar-collapse .menu__list {
+      font-family: 'Barkentina';
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -ms-flex-pack: distribute;
           justify-content: space-around; }
       nav .navbar-collapse .menu__list .menu__item {
-        font-family: sans-serif;
         font-size: 20px;
         font-weight: bold;
         color: #e4691a;
@@ -42,6 +144,9 @@ nav {
         nav .navbar-collapse .menu__list .menu__item .menu__link {
           text-decoration: none;
           color: #e4691a; }
+          nav .navbar-collapse .menu__list .menu__item .menu__link:hover, nav .navbar-collapse .menu__list .menu__item .menu__link:active, nav .navbar-collapse .menu__list .menu__item .menu__link:focus {
+            color: #b5421e;
+            background-color: transparent; }
         nav .navbar-collapse .menu__list .menu__item .call-button {
           background: yellow;
           border-radius: 5px; }
@@ -52,58 +157,158 @@ nav {
   display: none; }
 
 .main {
-  margin-top: 120px; }
-
-.aboutme .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  padding-top: 10px;
-  margin-top: 20px; }
-  .aboutme .row:nth-child(2) {
-    margin-top: 40px; }
-  .aboutme .row .info {
-    -webkit-box-flex: 3;
-        -ms-flex: 3;
-            flex: 3;
-    text-align: center; }
-    .aboutme .row .info table {
-      width: 100%;
-      font-size: 18px; }
-      .aboutme .row .info table tbody tr {
-        height: 70px;
-        text-align: left; }
-      .aboutme .row .info table tbody td {
-        padding-right: 50px; }
-        .aboutme .row .info table tbody td img {
-          width: 70px;
-          height: 70px; }
-  .aboutme .row .foto {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-    background: url("../img/hJU32Smn2v0.jpg") no-repeat -33px center;
-    background-size: cover;
-    height: 500px; }
-  .aboutme .row .col-md-4 img {
-    width: 270px;
-    height: 80px; }
-
-.service {
-  margin-top: 80px; }
-  .service h2 {
-    text-align: center; }
-  .service table tbody tr td img {
-    width: 50px;
-    height: 50px; }
-
-.test {
-  background: url("../img/test.jpg") no-repeat;
+  margin-top: 80px;
+  font-family: 'Barkentina';
+  background: url("../img/main.jpg") no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  padding: 150px 0; }
+  padding: 200px 0; }
+  .main p {
+    font-size: 25px; }
+    .main p span {
+      font-style: italic;
+      font-size: 30px; }
+
+.aboutme {
+  background: url("../img/fon.jpg") no-repeat;
+  background-size: cover;
+  padding-bottom: 30px;
+  border-bottom: 3px solid #f45dc9; }
+  .aboutme .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding-top: 10px; }
+    .aboutme .row:nth-child(2) {
+      margin-top: 40px; }
+    .aboutme .row .info {
+      -webkit-box-flex: 3;
+          -ms-flex: 3;
+              flex: 3;
+      text-align: center;
+      padding: 10px 100px; }
+      .aboutme .row .info h1 {
+        margin-bottom: 20px; }
+      .aboutme .row .info table {
+        width: 100%;
+        font-size: 18px; }
+        .aboutme .row .info table tbody tr {
+          height: 70px;
+          text-align: left; }
+          .aboutme .row .info table tbody tr .obraz {
+            background-image: url(../img/icon/icon.png);
+            background-position: 0px -2600px;
+            width: 200px;
+            height: 200px; }
+          .aboutme .row .info table tbody tr .icon {
+            width: 70px;
+            height: 70px;
+            background-repeat: no-repeat;
+            background-size: 50%; }
+        .aboutme .row .info table tbody td {
+          padding-right: 50px; }
+          .aboutme .row .info table tbody td img {
+            width: 70px;
+            height: 70px; }
+    .aboutme .row .foto {
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+      background: url("../img/hJU32Smn2v0.jpg") no-repeat 0px center;
+      background-size: cover;
+      height: 510px;
+      margin-top: 20px;
+      box-shadow: 5px 5px 20px; }
+    .aboutme .row .col-md-4 img {
+      width: 270px;
+      height: 80px; }
+
+.col-md-4 {
+  width: 33.333333333%; }
+
+@media screen and (max-width: 768px) {
+  .aboutme {
+    margin: 0 auto; }
+    .aboutme .row {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0; }
+      .aboutme .row .info {
+        padding: 10px 15px; }
+        .aboutme .row .info table {
+          width: 100%; }
+          .aboutme .row .info table tbody tr {
+            height: 50px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #f56cce; }
+            .aboutme .row .info table tbody tr td {
+              padding-right: 20px; }
+              .aboutme .row .info table tbody tr td img {
+                width: 40px;
+                height: 40px; }
+      .aboutme .row .foto {
+        display: none; } }
+
+.service {
+  margin-top: 10px;
+  font-size: 18px; }
+  .service h1 {
+    text-align: center;
+    margin-bottom: 15px; }
+  .service .row {
+    margin-top: 15px; }
+    .service .row .img {
+      text-align: center; }
+      .service .row .img img {
+        width: 45%; }
+    .service .row .price .service-title {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .service .row .price .service-title img {
+        width: 50px;
+        height: 50px; }
+    .service .row .price h2 {
+      text-align: center; }
+    .service .row .price ul {
+      padding-left: 0; }
+      .service .row .price ul li {
+        list-style: none; }
+    .service .row .service-left-box .service-title {
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end; }
+      .service .row .service-left-box .service-title img {
+        margin-right: 15px; }
+    .service .row .service-left-box h2 {
+      text-align: right; }
+    .service .row .service-left-box ul li {
+      text-align: right; }
+    .service .row .service-right-box .service-title {
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start; }
+      .service .row .service-right-box .service-title img {
+        margin-left: 15px; }
+    .service .row .service-right-box h2 {
+      text-align: left; }
+    .service .row .service-right-box ul li {
+      text-align: left; }
+    .service .row p {
+      text-align: center; }
+  .service hr {
+    height: 2px;
+    background: #f6d1ef; }
 
 .photo {
   margin-top: 150px; }

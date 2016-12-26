@@ -1,23 +1,37 @@
+@import "./logo";
+@import "./icon";
+@font-face {
+    font-family: 'Barkentina';
+    src: local('Barkentina 1'), url('../fonts/barkentina1.woff2') format('woff2'), url('../fonts/barkentina1.woff') format('woff'), url('../fonts/barkentina1.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'AMG Anahit';
+    src: local('AMG Anahit Semi Serif'), url('../fonts/amganahitsemiserif.woff2') format('woff2'), url('../fonts/amganahitsemiserif.woff') format('woff'), url('../fonts/amganahitsemiserif.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
 body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "AMG Anahit";
 }
-.col-md-4{float: left; width: 33.333333333%; text-align: center;}
-.container{margin-top: 20px;}
+.navbar.navbar-default.navbar-fixed-top{background: linear-gradient(to top, #f6d1ef, #f5eaf1);}
 nav{
     width: 100%;
-    padding-top: 40px;
-    height: 100px;
-    // border-top: 2px solid rgb(228,40,245);
-    // border-bottom: 2px solid rgb(228,40,245);
-    // background: rgba(238,120,131,.67);
+    padding-top: 30px;
+    height: 80px;
+    margin-right: 70px;
     .navbar-header{
         display: inline-block;
         .logo{
             &__img{
-                margin-top: -50px;
-                width: 80px;
+                margin-top: -45px;
+                width: 100px;
+                margin-left: 80px;
                 &:hover{
                     cursor: pointer;
                 }
@@ -28,13 +42,14 @@ nav{
         height: 50px;
         .nav{
             margin-top: -15px;
+            margin-right: 80px;
         }
         .menu__list{
-            // width: 700px;
-            display: flex;
-            justify-content: space-around;
+                // width: 700px;
+                font-family: 'Barkentina';
+                display: flex;
+                justify-content: space-around;
             .menu__item{
-                font-family: sans-serif;
                 font-size: 20px;
                 font-weight: bold;
                     color: #e4691a;
@@ -45,6 +60,10 @@ nav{
                 .menu__link{
                     text-decoration: none;
                     color: #e4691a;
+                    &:hover, &:active, &:focus{
+                        color: #b5421e;
+                        background-color: transparent;
+                    }
                 }
                 .call-button{
                     background: yellow;
@@ -64,22 +83,42 @@ nav{
 
 
 .main{
-    margin-top: 120px;
+    margin-top: 80px;
+    font-family: 'Barkentina';
+    background: url('../img/main.jpg') no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 200px 0;
+    p{
+        font-size: 25px;
+        span{
+            font-style: italic;
+            font-size: 30px;
+        }
+    }
 }
 
 
 .aboutme{
+    background: url('../img/fon.jpg') no-repeat;
+    background-size: cover;
+    // background: rgba(#e8d5e3,.48);
+    padding-bottom: 30px;
+    border-bottom: 3px solid rgb(244,93,201);
     .row{
         display: flex;
         justify-content: space-around;
         padding-top: 10px;
-        margin-top: 20px;
         &:nth-child(2){
             margin-top: 40px;
         }
         .info{
             flex: 3;
             text-align: center;
+            padding: 10px 100px;
+            h1{
+                margin-bottom: 20px;
+            }
             table{
                 width: 100%;
                 font-size: 18px;
@@ -87,6 +126,8 @@ nav{
                     tr{
                         height: 70px;
                         text-align: left;
+                        .obraz{@include sprite($obraz)}
+                        .icon{width: 70px; height: 70px; background-repeat: no-repeat; background-size: 50%;}
                     }
                     td{
                         padding-right: 50px;
@@ -100,9 +141,11 @@ nav{
         }
         .foto{
             flex: 1;
-            background: url('../img/hJU32Smn2v0.jpg') no-repeat -33px center;
+            background: url('../img/hJU32Smn2v0.jpg') no-repeat 0px center;
             background-size: cover;
-            height: 500px;
+            height: 510px;
+            margin-top: 20px;
+            box-shadow: 5px 5px 20px;
         }
         .col-md-4{
             img{
@@ -110,36 +153,127 @@ nav{
                 height: 80px;
             }
         }
+        // .paese{@include sprite($paese)}
+        // .la-girl{@include sprite($la-girl)}
+        // .nyx{@include sprite($nyx)}
+        // .maybelline{@include sprite($maybelline)}
+        // .catrice{@include sprite($catrice)}
+        // .benefit{@include sprite($benefit-logo)}
     }
+
 }
-
-
-.service{
-    margin-top: 80px;
-    h2{
-        text-align: center;
-    }
-    table{
-        tbody{
-            tr{
-                td{
-                    img{
-                        width: 50px;
-                        height: 50px;
+.col-md-4{width: 33.333333333%}
+@media screen and (max-width: 768px) {
+    .aboutme{
+        margin: 0 auto;
+        .row{
+            flex-direction: column;
+            width: 100%;
+            margin-right: 0;
+            margin-left: 0;
+            .info{
+                padding: 10px 15px;
+                table{
+                    width: 100%;
+                    tbody{
+                        tr{
+                            height: 50px;
+                            font-size: 16px;
+                            margin-bottom: 10px;
+                            border-bottom: 2px solid #f56cce;
+                            td{
+                                padding-right: 20px;
+                                img{
+                                    width: 40px;
+                                    height: 40px;
+                                }
+                            }
+                        }
                     }
                 }
+            }
+            .foto{
+                display: none;
+                // width: 50%;
+                // height: 300px;
+                // margin: 0 auto;
             }
         }
     }
 }
 
-
-.test{
-    background: url('../img/test.jpg') no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    padding: 150px 0;
+.service{
+    margin-top: 10px;
+    font-size: 18px;
+    h1{
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .row{
+        margin-top: 15px;
+        .img{
+            text-align: center;
+            img{
+                width: 45%;
+            }
+        }
+        .price{
+            .service-title{
+                display: flex;
+                align-items: center;
+                img{
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+            h2{text-align: center;}
+            ul{
+                padding-left: 0;
+                li{
+                    list-style: none;
+                }
+            }
+        }
+        .service-left-box{
+            .service-title{
+                justify-content: flex-end;
+                img{
+                    margin-right: 15px;
+                }
+            }
+            h2{text-align: right;}
+            ul{
+                li{
+                    text-align: right;
+                }
+            }
+        }
+        .service-right-box{
+            .service-title{
+                justify-content: flex-start;
+                img{
+                    margin-left: 15px;
+                }
+            }
+            h2{
+                text-align: left;
+            }
+            ul{
+                li{
+                    text-align: left;
+                }
+            }
+        }
+        p{text-align: center;}
+    }
+    hr{
+        height: 2px;
+        background: #f6d1ef;
+    }
 }
+
+
+
 
 .photo{
     margin-top: 150px;

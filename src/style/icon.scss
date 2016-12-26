@@ -1,0 +1,294 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$brush-name: 'brush';
+$brush-x: 0px;
+$brush-y: 200px;
+$brush-offset-x: 0px;
+$brush-offset-y: -200px;
+$brush-width: 200px;
+$brush-height: 200px;
+$brush-total-width: 200px;
+$brush-total-height: 3800px;
+$brush-image: '../img/icon/icon.png';
+$brush: (0px, 200px, 0px, -200px, 200px, 200px, 200px, 3800px, '../img/icon/icon.png', 'brush', );
+$brush2-name: 'brush2';
+$brush2-x: 0px;
+$brush2-y: 1800px;
+$brush2-offset-x: 0px;
+$brush2-offset-y: -1800px;
+$brush2-width: 200px;
+$brush2-height: 200px;
+$brush2-total-width: 200px;
+$brush2-total-height: 3800px;
+$brush2-image: '../img/icon/icon.png';
+$brush2: (0px, 1800px, 0px, -1800px, 200px, 200px, 200px, 3800px, '../img/icon/icon.png', 'brush2', );
+$clean-name: 'clean';
+$clean-x: 0px;
+$clean-y: 400px;
+$clean-offset-x: 0px;
+$clean-offset-y: -400px;
+$clean-width: 200px;
+$clean-height: 200px;
+$clean-total-width: 200px;
+$clean-total-height: 3800px;
+$clean-image: '../img/icon/icon.png';
+$clean: (0px, 400px, 0px, -400px, 200px, 200px, 200px, 3800px, '../img/icon/icon.png', 'clean', );
+$clock-name: 'clock';
+$clock-x: 0px;
+$clock-y: 600px;
+$clock-offset-x: 0px;
+$clock-offset-y: -600px;
+$clock-width: 200px;
+$clock-height: 200px;
+$clock-total-width: 200px;
+$clock-total-height: 3800px;
+$clock-image: '../img/icon/icon.png';
+$clock: (0px, 600px, 0px, -600px, 200px, 200px, 200px, 3800px, '../img/icon/icon.png', 'clock', );
+$day-name: 'day';
+$day-x: 0px;
+$day-y: 800px;
+$day-offset-x: 0px;
+$day-offset-y: -800px;
+$day-width: 200px;
+$day-height: 200px;
+$day-total-width: 200px;
+$day-total-height: 3800px;
+$day-image: '../img/icon/icon.png';
+$day: (0px, 800px, 0px, -800px, 200px, 200px, 200px, 3800px, '../img/icon/icon.png', 'day', );
+$evening-name: 'evening';
+$evening-x: 0px;
+$evening-y: 1000px;
+$evening-offset-x: 0px;
+$evening-offset-y: -1000px;
+$evening-width: 200px;
+$evening-height: 200px;
+$evening-total-width: 200px;
+$evening-total-height: 3800px;
+$evening-image: '../img/icon/icon.png';
+$evening: (0px, 1000px, 0px, -1000px, 200px, 200px, 200px, 3800px, '../img/icon/icon.png', 'evening', );
+$foto-name: 'foto';
+$foto-x: 0px;
+$foto-y: 1200px;
+$foto-offset-x: 0px;
+$foto-offset-y: -1200px;
+$foto-width: 200px;
+$foto-height: 200px;
+$foto-total-width: 200px;
+$foto-total-height: 3800px;
+$foto-image: '../img/icon/icon.png';
+$foto: (0px, 1200px, 0px, -1200px, 200px, 200px, 200px, 3800px, '../img/icon/icon.png', 'foto', );
+$fotosession-name: 'fotosession';
+$fotosession-x: 0px;
+$fotosession-y: 1400px;
+$fotosession-offset-x: 0px;
+$fotosession-offset-y: -1400px;
+$fotosession-width: 200px;
+$fotosession-height: 200px;
+$fotosession-total-width: 200px;
+$fotosession-total-height: 3800px;
+$fotosession-image: '../img/icon/icon.png';
+$fotosession: (0px, 1400px, 0px, -1400px, 200px, 200px, 200px, 3800px, '../img/icon/icon.png', 'fotosession', );
+$hair1-name: 'hair1';
+$hair1-x: 0px;
+$hair1-y: 1600px;
+$hair1-offset-x: 0px;
+$hair1-offset-y: -1600px;
+$hair1-width: 200px;
+$hair1-height: 200px;
+$hair1-total-width: 200px;
+$hair1-total-height: 3800px;
+$hair1-image: '../img/icon/icon.png';
+$hair1: (0px, 1600px, 0px, -1600px, 200px, 200px, 200px, 3800px, '../img/icon/icon.png', 'hair1', );
+$hairdo-name: 'hairdo';
+$hairdo-x: 0px;
+$hairdo-y: 0px;
+$hairdo-offset-x: 0px;
+$hairdo-offset-y: 0px;
+$hairdo-width: 200px;
+$hairdo-height: 200px;
+$hairdo-total-width: 200px;
+$hairdo-total-height: 3800px;
+$hairdo-image: '../img/icon/icon.png';
+$hairdo: (0px, 0px, 0px, 0px, 200px, 200px, 200px, 3800px, '../img/icon/icon.png', 'hairdo', );
+$hairstyle-name: 'hairstyle';
+$hairstyle-x: 0px;
+$hairstyle-y: 2000px;
+$hairstyle-offset-x: 0px;
+$hairstyle-offset-y: -2000px;
+$hairstyle-width: 200px;
+$hairstyle-height: 200px;
+$hairstyle-total-width: 200px;
+$hairstyle-total-height: 3800px;
+$hairstyle-image: '../img/icon/icon.png';
+$hairstyle: (0px, 2000px, 0px, -2000px, 200px, 200px, 200px, 3800px, '../img/icon/icon.png', 'hairstyle', );
+$hairstyle1-name: 'hairstyle1';
+$hairstyle1-x: 0px;
+$hairstyle1-y: 2200px;
+$hairstyle1-offset-x: 0px;
+$hairstyle1-offset-y: -2200px;
+$hairstyle1-width: 200px;
+$hairstyle1-height: 200px;
+$hairstyle1-total-width: 200px;
+$hairstyle1-total-height: 3800px;
+$hairstyle1-image: '../img/icon/icon.png';
+$hairstyle1: (0px, 2200px, 0px, -2200px, 200px, 200px, 200px, 3800px, '../img/icon/icon.png', 'hairstyle1', );
+$makeup-name: 'makeup';
+$makeup-x: 0px;
+$makeup-y: 2400px;
+$makeup-offset-x: 0px;
+$makeup-offset-y: -2400px;
+$makeup-width: 200px;
+$makeup-height: 200px;
+$makeup-total-width: 200px;
+$makeup-total-height: 3800px;
+$makeup-image: '../img/icon/icon.png';
+$makeup: (0px, 2400px, 0px, -2400px, 200px, 200px, 200px, 3800px, '../img/icon/icon.png', 'makeup', );
+$obraz-name: 'obraz';
+$obraz-x: 0px;
+$obraz-y: 2600px;
+$obraz-offset-x: 0px;
+$obraz-offset-y: -2600px;
+$obraz-width: 200px;
+$obraz-height: 200px;
+$obraz-total-width: 200px;
+$obraz-total-height: 3800px;
+$obraz-image: '../img/icon/icon.png';
+$obraz: (0px, 2600px, 0px, -2600px, 200px, 200px, 200px, 3800px, '../img/icon/icon.png', 'obraz', );
+$obraz1-name: 'obraz1';
+$obraz1-x: 0px;
+$obraz1-y: 2800px;
+$obraz1-offset-x: 0px;
+$obraz1-offset-y: -2800px;
+$obraz1-width: 200px;
+$obraz1-height: 200px;
+$obraz1-total-width: 200px;
+$obraz1-total-height: 3800px;
+$obraz1-image: '../img/icon/icon.png';
+$obraz1: (0px, 2800px, 0px, -2800px, 200px, 200px, 200px, 3800px, '../img/icon/icon.png', 'obraz1', );
+$paletka-name: 'paletka';
+$paletka-x: 0px;
+$paletka-y: 3000px;
+$paletka-offset-x: 0px;
+$paletka-offset-y: -3000px;
+$paletka-width: 200px;
+$paletka-height: 200px;
+$paletka-total-width: 200px;
+$paletka-total-height: 3800px;
+$paletka-image: '../img/icon/icon.png';
+$paletka: (0px, 3000px, 0px, -3000px, 200px, 200px, 200px, 3800px, '../img/icon/icon.png', 'paletka', );
+$speaking-name: 'speaking';
+$speaking-x: 0px;
+$speaking-y: 3200px;
+$speaking-offset-x: 0px;
+$speaking-offset-y: -3200px;
+$speaking-width: 200px;
+$speaking-height: 200px;
+$speaking-total-width: 200px;
+$speaking-total-height: 3800px;
+$speaking-image: '../img/icon/icon.png';
+$speaking: (0px, 3200px, 0px, -3200px, 200px, 200px, 200px, 3800px, '../img/icon/icon.png', 'speaking', );
+$suggestions-name: 'suggestions';
+$suggestions-x: 0px;
+$suggestions-y: 3400px;
+$suggestions-offset-x: 0px;
+$suggestions-offset-y: -3400px;
+$suggestions-width: 200px;
+$suggestions-height: 200px;
+$suggestions-total-width: 200px;
+$suggestions-total-height: 3800px;
+$suggestions-image: '../img/icon/icon.png';
+$suggestions: (0px, 3400px, 0px, -3400px, 200px, 200px, 200px, 3800px, '../img/icon/icon.png', 'suggestions', );
+$wedding-name: 'wedding';
+$wedding-x: 0px;
+$wedding-y: 3600px;
+$wedding-offset-x: 0px;
+$wedding-offset-y: -3600px;
+$wedding-width: 200px;
+$wedding-height: 200px;
+$wedding-total-width: 200px;
+$wedding-total-height: 3800px;
+$wedding-image: '../img/icon/icon.png';
+$wedding: (0px, 3600px, 0px, -3600px, 200px, 200px, 200px, 3800px, '../img/icon/icon.png', 'wedding', );
+$spritesheet-width: 200px;
+$spritesheet-height: 3800px;
+$spritesheet-image: '../img/icon/icon.png';
+$spritesheet-sprites: ($brush, $brush2, $clean, $clock, $day, $evening, $foto, $fotosession, $hair1, $hairdo, $hairstyle, $hairstyle1, $makeup, $obraz, $obraz1, $paletka, $speaking, $suggestions, $wedding, );
+$spritesheet: (200px, 3800px, '../img/icon/icon.png', $spritesheet-sprites, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
