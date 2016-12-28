@@ -7,6 +7,28 @@
 
 $(function () {
 
+    $(".hvr-grow").fancybox({
+        'overlayShow'   :   true,
+        'centerOnScroll':   true,
+        'overlayColor'  :   '#333',
+        'margin'        :   '10',
+        'cyclic'        :   'true'
+    });
+
+
+    var datafoto = {
+        foto: [
+            "../img/foto/001.jpg", "../img/foto/002.jpg", "../img/foto/003.jpg", "../img/foto/004.jpg", "../img/foto/005.jpg", "../img/foto/006.jpg", "../img/foto/007.jpg"
+        ]
+    }
+
+    $('.grid').isotope({
+        itemSelector: '.grid-item',
+        masonry: {
+          columnWidth: '.grid-item'
+        }
+    });
+
     // Scroll
     $('a.page-scroll').bind('click', function (event) {
         var $anchor = $(this);
@@ -49,4 +71,5 @@ $(function () {
 
     //animate about foto
     $('.foto').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', doSomething);
+
 });
