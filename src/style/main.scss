@@ -45,7 +45,6 @@ nav{
             margin-right: 80px;
         }
         .menu__list{
-                // width: 700px;
                 font-family: 'Barkentina';
                 display: flex;
                 justify-content: space-around;
@@ -55,14 +54,14 @@ nav{
                     color: #e4691a;
                 margin-left: 20px;
                 list-style-type: none;
-                // border: 2px solid rgb(228,40,245);
-                // border-radius: 20px;
                 .menu__link{
                     text-decoration: none;
                     color: #e4691a;
                     &:hover, &:active, &:focus{
                         color: #b5421e;
                         background-color: transparent;
+                        background-image: none;
+                        box-shadow: none;
                     }
                 }
                 .call-button{
@@ -88,12 +87,50 @@ nav{
     background: url('../img/main.jpg') no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    padding: 200px 0;
+    padding: 120px 0;
     p{
-        font-size: 25px;
+        font-size: 18px;
+        text-align: center;
         span{
             font-style: italic;
-            font-size: 30px;
+            font-size: 22px;
+        }
+    }
+    .quote{
+        text-align: center;
+        &:before {
+            content: open-quote;
+            font-size: 24pt;
+            text-align: center;
+            line-height: 42px;
+            color: #fff;
+            background: #f6d1ef;
+            float: left;
+            position: relative;
+            top: 15px;
+            border-radius: 25px;
+
+            /** define it as a block element **/
+            display: block;
+            height: 25px;
+            width: 25px;
+        }
+        &:after {
+            content: close-quote;
+            font-size: 24pt;
+            text-align: center;
+            line-height: 42px;
+            color: #fff;
+            background: #f6d1ef;
+            float: right;
+            position: relative;
+            bottom: 45px;
+            border-radius: 25px;
+
+            /** define it as a block element **/
+            display: block;
+            height: 25px;
+            width: 25px;
         }
     }
 }
@@ -102,7 +139,6 @@ nav{
 .aboutme{
     background: url('../img/fon.jpg') no-repeat;
     background-size: cover;
-    // background: rgba(#e8d5e3,.48);
     padding-bottom: 30px;
     border-bottom: 3px solid rgb(244,93,201);
     .row{
@@ -126,8 +162,6 @@ nav{
                     tr{
                         height: 70px;
                         text-align: left;
-                        .obraz{@include sprite($obraz)}
-                        .icon{width: 70px; height: 70px; background-repeat: no-repeat; background-size: 50%;}
                     }
                     td{
                         padding-right: 50px;
@@ -294,7 +328,7 @@ nav{
         }
         .grid-item{
             float: left;
-            height: 300px;
+            // height: 300px;
             width: 33.333333%;
             padding: 20px 10px;
             overflow: hidden;
@@ -305,11 +339,5 @@ nav{
             }
         }
         .gutter-sizer { width: 2%; }
-        .vertical{
-            text-align: center;
-            a{img{
-                width: 85%;
-            }}
-        }
     }  //end grid
 }

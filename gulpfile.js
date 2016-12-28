@@ -95,11 +95,11 @@ gulp.task('style:build', function () {
 });
 gulp.task('image:build', function () {
     gulp.src(path.src.img) //Выберем наши картинки
-        // .pipe(imagemin({ //Сожмем их
-        //     progressive: true,
-        //     svgoPlugins: [{removeViewBox: false}],
-        //     interlaced: true
-        // }))
+        .pipe(imagemin({ //Сожмем их
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            interlaced: true
+        }))
         .pipe(gulp.dest(path.dist.img)) //И бросим в dist
         .pipe(reload({stream: true}));
 });

@@ -146,7 +146,9 @@ nav {
           color: #e4691a; }
           nav .navbar-collapse .menu__list .menu__item .menu__link:hover, nav .navbar-collapse .menu__list .menu__item .menu__link:active, nav .navbar-collapse .menu__list .menu__item .menu__link:focus {
             color: #b5421e;
-            background-color: transparent; }
+            background-color: transparent;
+            background-image: none;
+            box-shadow: none; }
         nav .navbar-collapse .menu__list .menu__item .call-button {
           background: yellow;
           border-radius: 5px; }
@@ -162,12 +164,45 @@ nav {
   background: url("../img/main.jpg") no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  padding: 200px 0; }
+  padding: 120px 0; }
   .main p {
-    font-size: 25px; }
+    font-size: 18px;
+    text-align: center; }
     .main p span {
       font-style: italic;
-      font-size: 30px; }
+      font-size: 22px; }
+  .main .quote {
+    text-align: center; }
+    .main .quote:before {
+      content: open-quote;
+      font-size: 24pt;
+      text-align: center;
+      line-height: 42px;
+      color: #fff;
+      background: #f6d1ef;
+      float: left;
+      position: relative;
+      top: 15px;
+      border-radius: 25px;
+      /** define it as a block element **/
+      display: block;
+      height: 25px;
+      width: 25px; }
+    .main .quote:after {
+      content: close-quote;
+      font-size: 24pt;
+      text-align: center;
+      line-height: 42px;
+      color: #fff;
+      background: #f6d1ef;
+      float: right;
+      position: relative;
+      bottom: 45px;
+      border-radius: 25px;
+      /** define it as a block element **/
+      display: block;
+      height: 25px;
+      width: 25px; }
 
 .aboutme {
   background: url("../img/fon.jpg") no-repeat;
@@ -197,16 +232,6 @@ nav {
         .aboutme .row .info table tbody tr {
           height: 70px;
           text-align: left; }
-          .aboutme .row .info table tbody tr .obraz {
-            background-image: url(../img/icon/icon.png);
-            background-position: 0px -2600px;
-            width: 200px;
-            height: 200px; }
-          .aboutme .row .info table tbody tr .icon {
-            width: 70px;
-            height: 70px;
-            background-repeat: no-repeat;
-            background-size: 50%; }
         .aboutme .row .info table tbody td {
           padding-right: 50px; }
           .aboutme .row .info table tbody td img {
@@ -326,7 +351,6 @@ nav {
       width: 32%; }
     .photo .grid .grid-item {
       float: left;
-      height: 300px;
       width: 33.333333%;
       padding: 20px 10px;
       overflow: hidden; }
@@ -334,7 +358,3 @@ nav {
         width: 100%; }
     .photo .grid .gutter-sizer {
       width: 2%; }
-    .photo .grid .vertical {
-      text-align: center; }
-      .photo .grid .vertical a img {
-        width: 85%; }
