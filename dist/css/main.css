@@ -358,3 +358,112 @@ nav {
         width: 100%; }
     .photo .grid .gutter-sizer {
       width: 2%; }
+
+.contacts {
+  margin-top: 20px;
+  padding: 10px 0;
+  position: relative;
+  color: #fff; }
+  .contacts .container::before {
+    content: "";
+    background: url("../img/02.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -2; }
+  .contacts .container::after {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; }
+  .contacts .container h1 {
+    text-align: center;
+    margin: 20px; }
+  .contacts .container .mycontacts {
+    text-align: center;
+    font-size: 20px; }
+    .contacts .container .mycontacts span {
+      font-size: 16px; }
+  .contacts .container .social {
+    width: 200px;
+    margin: 30px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+    .contacts .container .social .soc-icon {
+      width: 50px;
+      height: 50px;
+      background: url("../img/social.png");
+      display: block; }
+    .contacts .container .social .vk {
+      background-position: 2px 0; }
+    .contacts .container .social .fb {
+      background-position: 153px 0; }
+    .contacts .container .social .insta {
+      background-position: 104px 0; }
+  .contacts .container .form .feedback-box {
+    width: 600px;
+    margin: 0 auto;
+    text-align: center; }
+    .contacts .container .form .feedback-box p {
+      text-align: center;
+      font-size: 20px; }
+    .contacts .container .form .feedback-box .column-left {
+      width: 48%;
+      float: left; }
+      .contacts .container .form .feedback-box .column-left input {
+        margin: 5px;
+        padding: 8px;
+        width: 100%;
+        border-radius: 5px;
+        background: transparent;
+        border: 1px solid #fff;
+        color: #fff; }
+      .contacts .container .form .feedback-box .column-left input[placeholder] {
+        font-size: 18px; }
+    .contacts .container .form .feedback-box .column-right {
+      width: 48%;
+      float: right; }
+      .contacts .container .form .feedback-box .column-right textarea {
+        margin: 10px;
+        padding: 10px;
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        background: transparent;
+        border: 1px solid #fff;
+        color: #fff; }
+    .contacts .container .form .feedback-box .button {
+      margin: 10px;
+      width: 50%;
+      text-align: center;
+      border-radius: 5px; }
+
+footer {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-linear-gradient(bottom, #f6d1ef, #f5eaf1);
+  background: linear-gradient(to top, #f6d1ef, #f5eaf1); }
+  footer a {
+    text-decoration: none; }
+    footer a:hover {
+      text-decoration: none; }
