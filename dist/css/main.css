@@ -340,9 +340,11 @@ nav {
         font-size: 20px; }
       .contacts .contacts-box .form .feedback-box .column-left {
         width: 48%;
-        float: left; }
+        float: left;
+        /* Firefox 19+ */
+        /* Firefox 18- */ }
         .contacts .contacts-box .form .feedback-box .column-left input {
-          margin: 5px;
+          margin: 4px;
           padding: 8px;
           width: 100%;
           border-radius: 5px;
@@ -350,20 +352,110 @@ nav {
           border: 1px solid #fff;
           color: #fff; }
         .contacts .contacts-box .form .feedback-box .column-left input[placeholder] {
-          font-size: 18px;
-          color: #000; }
+          font-size: 18px; }
+        .contacts .contacts-box .form .feedback-box .column-left input::-webkit-input-placeholder {
+          color: #fff; }
+        .contacts .contacts-box .form .feedback-box .column-left input::-moz-placeholder {
+          color: #fff; }
+        .contacts .contacts-box .form .feedback-box .column-left input:-moz-placeholder {
+          color: #fff; }
+        .contacts .contacts-box .form .feedback-box .column-left input:-ms-input-placeholder {
+          color: #fff; }
+        .contacts .contacts-box .form .feedback-box .column-left input::-webkit-input-placeholder {
+          text-indent: 0px;
+          -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease; }
+        .contacts .contacts-box .form .feedback-box .column-left input::-moz-placeholder {
+          text-indent: 0px;
+          -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease; }
+        .contacts .contacts-box .form .feedback-box .column-left input:-moz-placeholder {
+          text-indent: 0px;
+          -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease; }
+        .contacts .contacts-box .form .feedback-box .column-left input:-ms-input-placeholder {
+          text-indent: 0px;
+          -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease; }
+        .contacts .contacts-box .form .feedback-box .column-left input:focus::-webkit-input-placeholder {
+          text-indent: 250px;
+          -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease;
+          opacity: 0; }
+        .contacts .contacts-box .form .feedback-box .column-left input:focus::-moz-placeholder {
+          text-indent: 250px;
+          -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease;
+          opacity: 0; }
+        .contacts .contacts-box .form .feedback-box .column-left input:focus:-moz-placeholder {
+          text-indent: 250px;
+          -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease;
+          opacity: 0; }
+        .contacts .contacts-box .form .feedback-box .column-left input:focus:-ms-input-placeholder {
+          text-indent: 250px;
+          -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease;
+          opacity: 0; }
       .contacts .contacts-box .form .feedback-box .column-right {
         width: 48%;
-        float: right; }
+        float: right;
+        /* Firefox 19+ */
+        /* Firefox 18- */ }
         .contacts .contacts-box .form .feedback-box .column-right textarea {
-          margin: 10px;
-          padding: 10px;
+          margin: 5px;
+          padding: 8px;
+          font-size: 18px;
           width: 100%;
           height: 100%;
           border-radius: 5px;
           background: transparent;
           border: 1px solid #fff;
           color: #fff; }
+        .contacts .contacts-box .form .feedback-box .column-right textarea::-webkit-input-placeholder {
+          color: #fff; }
+        .contacts .contacts-box .form .feedback-box .column-right textarea::-moz-placeholder {
+          color: #fff; }
+        .contacts .contacts-box .form .feedback-box .column-right textarea:-moz-placeholder {
+          color: #fff; }
+        .contacts .contacts-box .form .feedback-box .column-right textarea:-ms-input-placeholder {
+          color: #fff; }
+        .contacts .contacts-box .form .feedback-box .column-right textarea::-webkit-input-placeholder {
+          text-indent: 0px;
+          -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease; }
+        .contacts .contacts-box .form .feedback-box .column-right textarea::-moz-placeholder {
+          text-indent: 0px;
+          -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease; }
+        .contacts .contacts-box .form .feedback-box .column-right textarea:-moz-placeholder {
+          text-indent: 0px;
+          -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease; }
+        .contacts .contacts-box .form .feedback-box .column-right textarea:-ms-input-placeholder {
+          text-indent: 0px;
+          -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease; }
+        .contacts .contacts-box .form .feedback-box .column-right textarea:focus::-webkit-input-placeholder {
+          text-indent: 190px;
+          -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease;
+          opacity: 0; }
+        .contacts .contacts-box .form .feedback-box .column-right textarea:focus::-moz-placeholder {
+          text-indent: 190px;
+          -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease;
+          opacity: 0; }
+        .contacts .contacts-box .form .feedback-box .column-right textarea:focus:-moz-placeholder {
+          text-indent: 190px;
+          -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease;
+          opacity: 0; }
+        .contacts .contacts-box .form .feedback-box .column-right textarea:focus:-ms-input-placeholder {
+          text-indent: 190px;
+          -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease;
+          opacity: 0; }
       .contacts .contacts-box .form .feedback-box .button {
         margin: 10px;
         width: 50%;
