@@ -459,10 +459,16 @@ nav {
       .contacts .contacts-box .form .feedback-box .button {
         margin: 10px;
         width: 50%;
+        height: 35px;
+        font-size: 18px;
         text-align: center;
-        border-radius: 5px; }
+        border-radius: 5px;
+        background: transparent;
+        border: 1px solid #fff;
+        color: #fff; }
   .contacts .contacts-fon {
-    background: url(../img/02.jpg) 0px/cover no-repeat fixed;
+    background: url(../img/contacts-fon.jpg) 0 no-repeat fixed;
+    background-size: cover;
     margin: 0;
     height: 1000px;
     position: absolute;

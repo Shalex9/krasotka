@@ -1,15 +1,26 @@
-/***************** Scroll Spy ******************/
 
-// $('body').scrollspy({
-//     target: '.navbar-fixed-top',
-//     offset: 83
-// });
 
 $(function () {
-
+    // 
+    // $('.owl-carousel').owlCarousel({
+    //     autoPlay: 5000,
+    //     navigation : false, // показывать кнопки next и prev
+    //     slideSpeed : 300,
+    //     paginationSpeed : 400,
+    //     items : 1,
+    //     itemsDesktop : false,
+    //     itemsDesktopSmall : false,
+    //     itemsTablet: false,
+    //     itemsMobile : false
+    // });
     new WOW().init();
 
-    $(".hvr-grow").fancybox({
+    $('.parallax').scrolly({bgParallax: true});
+
+
+
+    $(".fancybox-foto").fancybox({
+        "imageScale"    :   true,
         'overlayShow'   :   true,
         'centerOnScroll':   true,
         'overlayColor'  :   '#333',
@@ -32,22 +43,14 @@ $(function () {
         var $anchor = $(this);
         $('a.page-scroll').parent().removeClass('active');
         $(this).parent().addClass('active');
-
         var link = $anchor.attr('href');
-
         var f_div = $(link);
 
         if (f_div.length){
-            // if{
-            //
-            // } else {
                 $('html, body').stop().animate({
                     scrollTop: $($anchor.attr('href')).offset().top - 50
                 }, 1500, 'easeInOutExpo');
-            // }
-
         }
-
         event.preventDefault();
     });
 
