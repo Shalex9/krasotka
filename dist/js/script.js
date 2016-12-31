@@ -1,7 +1,7 @@
 
 
 $(function () {
-    // 
+    //
     // $('.owl-carousel').owlCarousel({
     //     autoPlay: 5000,
     //     navigation : false, // показывать кнопки next и prev

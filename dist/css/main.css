@@ -129,7 +129,7 @@ nav {
     background: url("../img/about-fon.jpg") 0 no-repeat fixed;
     background-size: cover;
     margin: 0;
-    height: 880px;
+    min-height: 1100px;
     position: absolute;
     top: 0;
     left: 0;
@@ -138,7 +138,7 @@ nav {
   .aboutme .about-opacity {
     background: rgba(216, 56, 242, 0.6);
     width: 100%;
-    height: 880px;
+    min-height: 880px;
     position: absolute;
     top: 0;
     left: 0; }
@@ -211,9 +211,45 @@ nav {
       .aboutme .row .foto {
         display: none; } }
 
+.service-background {
+  background: url("../img/banner.jpg") no-repeat;
+  background-size: 110%;
+  height: 100%;
+  width: 164px; }
+
+.float-left {
+  float: left; }
+
+.float-right {
+  float: right; }
+
 .service {
   font-size: 18px;
-  border-top: 3px solid #f45dc9; }
+  border-top: 3px solid #f45dc9;
+  position: relative;
+  height: 570px; }
+  .service .service-box {
+    position: absolute;
+    z-index: 4;
+    left: 50%;
+    margin-left: -480px;
+    width: 960px; }
+  .service .service-fon1 {
+    background: url("../img/logo.png") 0 no-repeat;
+    margin: 0;
+    min-height: 300px;
+    width: 200px;
+    position: absolute;
+    top: 0px;
+    left: 0px; }
+  .service .service-fon2 {
+    background: url("../img/logo.png") 0 no-repeat;
+    margin: 0;
+    min-height: 300px;
+    width: 200px;
+    position: absolute;
+    top: 0px;
+    left: 0px; }
   .service h1 {
     text-align: center;
     margin-bottom: 15px; }
@@ -268,7 +304,8 @@ nav {
 .photo {
   padding: 10px 30px;
   width: 100%;
-  border-top: 3px solid #f45dc9; }
+  border-top: 3px solid #f45dc9;
+  position: relative; }
   .photo h1 {
     text-align: center; }
   .photo .grid {
@@ -467,10 +504,10 @@ nav {
         border: 1px solid #fff;
         color: #fff; }
   .contacts .contacts-fon {
-    background: url(../img/contacts-fon.jpg) 0 no-repeat fixed;
+    background: url(../img/contacts-fon.jpg) no-repeat;
     background-size: cover;
     margin: 0;
-    height: 1000px;
+    min-height: 1000px;
     position: absolute;
     top: 0;
     left: 0;
@@ -478,7 +515,7 @@ nav {
   .contacts .contacts-opacity {
     background: rgba(242, 56, 201, 0.6);
     width: 100%;
-    height: 880px;
+    min-height: 880px;
     position: absolute;
     top: 0;
     left: 0; }
