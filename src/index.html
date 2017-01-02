@@ -24,17 +24,17 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right menu__list">
-                <li class="menu__item"><a class="menu__link page-scroll hvr-hang main-page" href="#main">Главная</a></li>
-                <li class="menu__item"><a class="menu__link page-scroll hvr-hang" href="#aboutme">Обо мне</a></li>
-                <li class="menu__item"><a class="menu__link page-scroll hvr-hang" href="#service">Услуги</a></li>
-                <li class="menu__item"><a class="menu__link page-scroll hvr-hang" href="#photo">Фото</a></li>
-                <li class="menu__item"><a class="menu__link page-scroll hvr-hang" href="#contacts">Контакты</a></li>
+                <li class="menu__item"><a class="menu__link page-scroll hvr-grow main-page active" data-scroll='main'>Главная</a></li>
+                <li class="menu__item"><a class="menu__link page-scroll hvr-grow" data-scroll='aboutme'>Обо мне</a></li>
+                <li class="menu__item"><a class="menu__link page-scroll hvr-grow" data-scroll='service'>Услуги</a></li>
+                <li class="menu__item"><a class="menu__link page-scroll hvr-grow" data-scroll='photo'>Портфолио</a></li>
+                <li class="menu__item"><a class="menu__link page-scroll hvr-grow" data-scroll='contacts'>Контакты</a></li>
             </ul>
         </div>
     </nav>
 
 
-    <section class="main" id="main">
+    <section class="main" data-anchor='main'>
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 col-md-offset-6">
@@ -43,7 +43,7 @@
                             - каждая девушка хочет слышать это в свой адрес. <br>
                             Хотите выглядеть на все 100%, в самый важный для Вас день?! <br>
                             Я готова помочь. <br>
-                            Обажаю создавать неповторимые образы, с радостью подчеркну вашу природную красоту
+                            Обажаю создавать неповторимые образы. С радостью подчеркну вашу природную красоту
                             с помощью своих умений и профессиональной косметики. <br>
                             Будьте красивыми и помните, как бы женщина не работала, у нее всегда должен оставаться вид красивой бездельницы :)
                         </p><br><br>
@@ -60,7 +60,7 @@
     </section>
 
 
-    <section class="aboutme" id="aboutme">
+    <section class="aboutme" data-anchor='aboutme'>
         <div class="container about-box">
                 <div class="row">
                     <div class="info col-xs-12 col-md-8">
@@ -117,7 +117,7 @@
     </section>
 
 
-    <section class="service" id="service">
+    <section class="service" data-anchor='service'>
         <div class="parallax service-background backgr-left" data-velocity="-.1"></div>
         <div class="parallax service-background backgr-right" data-velocity="-.1"></div>
         <div class="service-box">
@@ -175,7 +175,7 @@
     </section>
 
 
-    <section class="photo" id="photo">
+    <section class="photo" data-anchor='photo'>
         <div class="parallax photo-backgroung" data-velocity="-.3"></div>
         <h1 class="wow fadeInUp">Мои работы</h1>
         <div class="grid">
@@ -236,7 +236,7 @@
     </section>
 
 
-    <section class="contacts" id="contacts">
+    <section class="contacts" data-anchor='contacts'>
         <div class="container contacts-box">
             <h1 class="wow fadeInUp">Контакты</h1>
             <div class="mycontacts wow slideInLeft">

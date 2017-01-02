@@ -57,8 +57,12 @@ nav {
         nav .navbar-collapse .menu__list .menu__item .menu__link {
           text-decoration: none;
           color: #e4691a; }
-          nav .navbar-collapse .menu__list .menu__item .menu__link:hover, nav .navbar-collapse .menu__list .menu__item .menu__link:active, nav .navbar-collapse .menu__list .menu__item .menu__link:focus {
-            color: #b5421e;
+          nav .navbar-collapse .menu__list .menu__item .menu__link.active {
+            color: #832609;
+            background-color: transparent;
+            background-image: none;
+            box-shadow: none; }
+          nav .navbar-collapse .menu__list .menu__item .menu__link:hover {
             background-color: transparent;
             background-image: none;
             box-shadow: none; }
@@ -77,7 +81,7 @@ nav {
   background: url("../img/main.jpg") no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  padding: 120px 0; }
+  padding: 50px 0 50px; }
   .main .row {
     text-align: center; }
   .main p {
