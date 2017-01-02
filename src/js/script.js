@@ -1,18 +1,18 @@
 
 
 $(function () {
-    //
-    // $('.owl-carousel').owlCarousel({
-    //     autoPlay: 5000,
-    //     navigation : false, // показывать кнопки next и prev
-    //     slideSpeed : 300,
-    //     paginationSpeed : 400,
-    //     items : 1,
-    //     itemsDesktop : false,
-    //     itemsDesktopSmall : false,
-    //     itemsTablet: false,
-    //     itemsMobile : false
-    // });
+    
+    $('.owl-carousel').owlCarousel({
+        autoPlay: 5000,
+        navigation : false, // показывать кнопки next и prev
+        slideSpeed : 300,
+        paginationSpeed : 400,
+        items : 1,
+        itemsDesktop : false,
+        itemsDesktopSmall : false,
+        itemsTablet: false,
+        itemsMobile : false
+    });
     new WOW().init();
 
     $('.parallax').scrolly({bgParallax: true});
