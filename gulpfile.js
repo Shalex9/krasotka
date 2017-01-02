@@ -43,6 +43,7 @@ var path = {
     src: { //Пути откуда брать исходники
         html: 'src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
         js: 'src/js/*.js',//В стилях и скриптах нам понадобятся только main файлы
+        // libs: 'src/js/libs/*.js',
         style: 'src/style/*.*',
         img: 'src/img/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
         fonts: 'src/fonts/**/*.*'
@@ -50,6 +51,7 @@ var path = {
     watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
         html: 'src/**/*.html',
         js: 'src/js/**/*.js',
+        // libs: 'src/js/libs/**/*.js',
         style: 'src/style/**/*.*',
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
@@ -82,6 +84,14 @@ gulp.task('js:build', function () {
         // .pipe(sourcemaps.write()) //Пропишем карты
         .pipe(gulp.dest(path.dist.js)) //Выплюнем готовый файл в dist
         .pipe(reload({stream: true})); //И перезагрузим сервер
+    // gulp.src(path.src.libs)
+    //     .pipe(concat('libs.min.js'))
+    //     .pipe(rigger())
+    //     .pipe(sourcemaps.init()) //Инициализируем sourcemap
+    //     .pipe(uglify()) //Сожмем наш js
+    //     .pipe(sourcemaps.write()) //Пропишем карты
+    //     .pipe(gulp.dest(path.dist.js)) //Выплюнем готовый файл в dist
+    //     .pipe(reload({stream: true})); //И перезагрузим сервер
 });
 gulp.task('style:build', function () {
     gulp.src(path.src.style) //Выберем наш main.scss
@@ -95,11 +105,11 @@ gulp.task('style:build', function () {
 });
 gulp.task('image:build', function () {
     gulp.src(path.src.img) //Выберем наши картинки
-        .pipe(imagemin({ //Сожмем их
-            progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
-            interlaced: true
-        }))
+        // .pipe(imagemin({ //Сожмем их
+        //     progressive: true,
+        //     svgoPlugins: [{removeViewBox: false}],
+        //     interlaced: true
+        // }))
         .pipe(gulp.dest(path.dist.img)) //И бросим в dist
         .pipe(reload({stream: true}));
 });
@@ -108,16 +118,16 @@ gulp.task('fonts:build', function() {
         .pipe(gulp.dest(path.dist.fonts))
 });
 
-gulp.task('sprite', function () {
-  var spriteData = gulp.src('src/img/icon/*.png')
-    .pipe(spritesmith({
-      imgName: 'sprite1.png',
-      cssName: 'sprite1.scss',
-      algorithm: 'top-down'
-    }));
-  spriteData.img.pipe(gulp.dest('src/img/'));
-  spriteData.css.pipe(gulp.dest('src/style/'));
-});
+// gulp.task('sprite', function () {
+//   var spriteData = gulp.src('src/img/icon/*.png')
+//     .pipe(spritesmith({
+//       imgName: 'sprite1.png',
+//       cssName: 'sprite1.scss',
+//       algorithm: 'top-down'
+//     }));
+//   spriteData.img.pipe(gulp.dest('src/img/'));
+//   spriteData.css.pipe(gulp.dest('src/style/'));
+// });
 
 gulp.task('build', [
     'html:build',
