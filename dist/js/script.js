@@ -66,16 +66,16 @@ $(function () {
             }
         });
         var top_scroll = $(this).scrollTop();
-        if (top_scroll > 0) {
-            $('.main-page').css('display', 'block');
-            $('.navbar').css('height', '50px');
-            $('nav').css('padding-top', '15px');
-            $('.logo__img').css({ 'width': '60px', 'margin-top': '-30px' });
-        } else {
-            $('.main-page').css('display', 'none');
-            $('.navbar').css('height', '80px');
-            $('nav').css('padding-top', '30px');
-            $('.logo__img').css({ 'width': '100px', 'margin-top': '-45px' });
+        if (screen.width >= '960px') {
+            if (top_scroll > 0) {
+                $('.navbar').css('height', '50px');
+                $('nav').css('padding-top', '15px');
+                $('.logo__img').css({ 'width': '60px', 'margin-top': '-30px' });
+            } else {
+                $('.navbar').css('height', '80px');
+                $('nav').css('padding-top', '30px');
+                $('.logo__img').css({ 'width': '100px', 'margin-top': '-45px' });
+            }
         }
     }).scroll();
 });
