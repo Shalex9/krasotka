@@ -41,14 +41,8 @@ nav{
             }
         }
     }
-    .active{
-        // color: black;
-        // background-color: transparent;
-        // background-image: none;
-        // box-shadow: none;
-    }
     .navbar-collapse{
-        height: 50px;
+        height: 80px;
         .nav{
             margin-top: -15px;
             margin-right: 80px;
@@ -58,10 +52,10 @@ nav{
                 display: flex;
                 justify-content: space-around;
             .menu__item{
-                font-size: 20px;
+                font-size: 18px;
                 font-weight: bold;
-                    color: #e4691a;
-                margin-left: 20px;
+                color: #e4691a;
+                margin-left: 10px;
                 list-style-type: none;
                 .menu__link{
                     text-decoration: none;
@@ -73,16 +67,10 @@ nav{
                         box-shadow: none;
                     }
                     &:hover{
-                        // color: #b5421e;
-                        // text-decoration: underline;
                         background-color: transparent;
                         background-image: none;
                         box-shadow: none;
                     }
-                }
-                .call-button{
-                    background: yellow;
-                    border-radius: 5px;
                 }
             }
         }
@@ -98,19 +86,19 @@ nav{
 
 
 .main{
-    margin-top: 80px;
+    margin-top: 50px;
     font-family: 'Barkentina';
     background: url('../img/main.jpg') no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    padding: 50px 0 50px;
+    padding: 30px 0 50px;
     .row{text-align: center;}
     p{
-        font-size: 18px;
+        font-size: 19px;
         text-align: center;
         span{
             font-style: italic;
-            font-size: 22px;
+            font-size: 50px;
         }
     }
     .quote{
@@ -315,7 +303,7 @@ nav{
             .brush{
                 width: 35px;
                 height: 35px;
-                background: url('../img/icon/brush3.png');
+                background: url('../img/icon/brush-pink.png');
                 background-size: cover;
             }
         }
@@ -389,13 +377,13 @@ nav{
     padding: 10px 30px;
     width: 100%;
     text-align: center;
-    min-height: 900px;
+    min-height: 880px;
     border-top: 3px solid rgb(244,93,201);
     .photo-backgroung{
         background: url('../img/1.png') no-repeat;
         background-size: cover;
         width: 100%;
-        min-height: 900px;
+        min-height: 880px;
         position:absolute;
         top:0;left:0;
         width:100%;
@@ -427,9 +415,64 @@ nav{
 }
 
 
+.comments{
+    padding: 10px 0;
+    min-height: 600px;
+    position: relative;
+    width: 100% !important;
+    overflow: hidden;
+    border-top: 3px solid rgb(244,93,201);
+    color: #fff;
+    .comments-box{
+        position: absolute;
+        z-index:4;
+        left: 50%;
+        margin-left: -585px;
+        h1{
+            text-align: center;
+            margin: 20px;
+        }
+        .owl-carousel{
+            .item{
+                margin-top: 50px;
+                text-align: center;
+                img{
+                    width: 250px;
+                    height: auto;
+                }
+                p{
+                    font-size: 18px;
+                    margin-top: 20px;
+                }
+                a{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    .comments-fon{
+        background: url(../img/comments-fon.jpg) no-repeat;
+        background-position-x: 200px!important;
+        background-size: cover;
+        margin: 0;
+        min-height: 600px;
+        position:absolute;
+        top:0;left:0;
+        width:100%;
+    }
+    .comments-opacity{
+        background: rgba(83,10,67,.6);
+        width: 100%;
+        min-height: 600px;
+        position: absolute;
+        top: 0;left: 0;
+    }
+}
+
+
 .contacts{
     padding: 10px 0;
-    min-height: 575px;
+    min-height: 560px;
     position: relative;
     width: 100% !important;
     overflow: hidden;
@@ -442,7 +485,7 @@ nav{
         margin-left: -585px;
         h1{
             text-align: center;
-            margin: 20px;
+            margin: 10px;
         }
         .mycontacts{
             text-align: center;
@@ -555,7 +598,7 @@ nav{
         // background-attachment: fixed;
         background-size: cover;
         margin: 0;
-        min-height: 575px;
+        min-height: 560px;
         position:absolute;
         top:0;left:0;
         width:100%;
@@ -563,7 +606,7 @@ nav{
     .contacts-opacity{
         background: rgba(242,56,201,.6);
         width: 100%;
-        min-height: 575px;
+        min-height: 560px;
         position: absolute;
         top: 0;left: 0;
     }

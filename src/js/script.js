@@ -12,6 +12,18 @@ $(function () {
         itemsMobile : false
     });
 
+    $('.owl-carousel-comments-box').owlCarousel({
+        autoPlay: 10000,
+        navigation : false, // показывать кнопки next и prev
+        slideSpeed : 300,
+        paginationSpeed : 400,
+        items : 1,
+        itemsDesktop : false,
+        itemsDesktopSmall : false,
+        itemsTablet: false,
+        itemsMobile : false
+    });
+
     new WOW().init();
 
     $('.parallax').scrolly({bgParallax: true});
@@ -41,7 +53,7 @@ $(function () {
         //  scrollPoint = $('section[data-anchor="' + scrollAnchor + '"]').offset().top;
      $('body,html').animate({
          scrollTop: $('section[data-anchor="' + scrollAnchor + '"]').offset().top-50
-     }, 1500, 'easeInOutExpo');
+     }, 1000, 'easeInOutExpo');
      return false;
      });
 
