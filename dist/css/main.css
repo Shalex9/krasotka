@@ -16,6 +16,9 @@ body {
   box-sizing: border-box;
   font-family: "AMG Anahit"; }
 
+.clearfix {
+  clear: both; }
+
 .navbar.navbar-default.navbar-fixed-top {
   background: -webkit-linear-gradient(bottom, #f6d1ef, #f5eaf1);
   background: linear-gradient(to top, #f6d1ef, #f5eaf1); }
@@ -211,50 +214,51 @@ nav {
       .aboutme .row .foto {
         display: none; } }
 
-.service-background {
-  background: url("../img/banner.jpg") no-repeat;
-  background-size: 110%;
-  height: 100%;
-  width: 164px; }
-
-.float-left {
-  float: left; }
-
-.float-right {
-  float: right; }
-
 .service {
   font-size: 18px;
   border-top: 3px solid #f45dc9;
   position: relative;
-  height: 570px; }
+  height: 560px; }
+  .service .service-background {
+    background-size: cover;
+    height: 560px;
+    width: 164px; }
+  .service .backgr-left {
+    float: left;
+    background: url("../img/banner-l.jpg") no-repeat; }
+  .service .backgr-right {
+    float: right;
+    background: url("../img/banner-r.jpg") no-repeat; }
   .service .service-box {
     position: absolute;
     z-index: 4;
     left: 50%;
     margin-left: -480px;
     width: 960px; }
-  .service .service-fon1 {
-    background: url("../img/logo.png") 0 no-repeat;
-    margin: 0;
-    min-height: 300px;
-    width: 200px;
-    position: absolute;
-    top: 0px;
-    left: 0px; }
-  .service .service-fon2 {
-    background: url("../img/logo.png") 0 no-repeat;
-    margin: 0;
-    min-height: 300px;
-    width: 200px;
-    position: absolute;
-    top: 0px;
-    left: 0px; }
+    .service .service-box .hr {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      .service .service-box .hr .line {
+        width: 250px;
+        height: 2px;
+        background: #f6d1ef; }
+      .service .service-box .hr .brush {
+        width: 35px;
+        height: 35px;
+        background: url("../img/icon/brush3.png");
+        background-size: cover; }
   .service h1 {
     text-align: center;
     margin-bottom: 15px; }
   .service .row {
-    margin-top: 20px; }
+    margin-top: 10px; }
     .service .row .img {
       text-align: center; }
       .service .row .img img {
@@ -297,15 +301,26 @@ nav {
       text-align: left; }
     .service .row p {
       text-align: center; }
-  .service hr {
-    height: 2px;
-    background: #f6d1ef; }
 
 .photo {
+  position: relative;
   padding: 10px 30px;
   width: 100%;
-  border-top: 3px solid #f45dc9;
-  position: relative; }
+  text-align: center;
+  min-height: 900px;
+  border-top: 3px solid #f45dc9; }
+  .photo .photo-backgroung {
+    background: url("../img/1.png") no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 900px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -2;
+    overflow: hidden;
+    opacity: 0.6; }
   .photo h1 {
     text-align: center; }
   .photo .grid {
@@ -314,23 +329,17 @@ nav {
       content: '';
       display: block;
       clear: both; }
-    .photo .grid .grid-item,
-    .photo .grid .grid-sizer {
-      width: 32%; }
     .photo .grid .grid-item {
       float: left;
-      width: 33.333333%;
+      width: 25%;
       padding: 20px 10px;
       overflow: hidden; }
       .photo .grid .grid-item a img {
         width: 100%; }
-    .photo .grid .gutter-sizer {
-      width: 2%; }
 
 .contacts {
-  margin-top: 20px;
   padding: 10px 0;
-  min-height: 600px;
+  min-height: 575px;
   position: relative;
   width: 100% !important;
   overflow: hidden;
@@ -507,7 +516,7 @@ nav {
     background: url(../img/contacts-fon.jpg) no-repeat;
     background-size: cover;
     margin: 0;
-    min-height: 1000px;
+    min-height: 575px;
     position: absolute;
     top: 0;
     left: 0;
@@ -515,7 +524,7 @@ nav {
   .contacts .contacts-opacity {
     background: rgba(242, 56, 201, 0.6);
     width: 100%;
-    min-height: 880px;
+    min-height: 575px;
     position: absolute;
     top: 0;
     left: 0; }
