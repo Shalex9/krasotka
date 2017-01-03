@@ -95,7 +95,8 @@ nav {
   background-size: cover;
   background-attachment: fixed;
   font-weight: bold;
-  padding: 30px 0 50px; }
+  padding: 30px 0 50px;
+  position: relative; }
   .main .row {
     text-align: center; }
   .main p {
@@ -136,6 +137,8 @@ nav {
       display: block;
       height: 25px;
       width: 25px; }
+  .main .main-opacity {
+    display: none; }
 
 .aboutme {
   position: relative;
@@ -148,11 +151,41 @@ nav {
     z-index: 4;
     left: 50%;
     margin-left: -585px; }
+    .aboutme .about-box .row {
+      text-align: center;
+      padding-top: 10px; }
+      .aboutme .about-box .row:nth-child(2) {
+        margin-top: 40px; }
+      .aboutme .about-box .row .info {
+        text-align: center;
+        padding: 10px 100px 10px 0px; }
+        .aboutme .about-box .row .info h1 {
+          margin-bottom: 20px; }
+        .aboutme .about-box .row .info table {
+          width: 100%;
+          font-size: 18px; }
+          .aboutme .about-box .row .info table tbody tr {
+            height: 70px;
+            text-align: left; }
+          .aboutme .about-box .row .info table tbody td {
+            padding-right: 50px; }
+            .aboutme .about-box .row .info table tbody td img {
+              width: 70px;
+              height: 70px; }
+      .aboutme .about-box .row .foto {
+        background: url("../img/hJU32Smn2v0.jpg") no-repeat 0px center;
+        background-size: cover;
+        height: 510px;
+        margin-top: 20px;
+        box-shadow: 5px 5px 20px; }
+      .aboutme .about-box .row .col-md-4 img {
+        width: 270px;
+        height: 80px; }
   .aboutme .about-fon {
     background: url("../img/about-fon.jpg") 0 no-repeat fixed;
     background-size: cover;
     margin: 0;
-    min-height: 1100px;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -161,40 +194,10 @@ nav {
   .aboutme .about-opacity {
     background: rgba(216, 56, 242, 0.6);
     width: 100%;
-    min-height: 880px;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0; }
-  .aboutme .row {
-    text-align: center;
-    padding-top: 10px; }
-    .aboutme .row:nth-child(2) {
-      margin-top: 40px; }
-    .aboutme .row .info {
-      text-align: center;
-      padding: 10px 100px 10px 0px; }
-      .aboutme .row .info h1 {
-        margin-bottom: 20px; }
-      .aboutme .row .info table {
-        width: 100%;
-        font-size: 18px; }
-        .aboutme .row .info table tbody tr {
-          height: 70px;
-          text-align: left; }
-        .aboutme .row .info table tbody td {
-          padding-right: 50px; }
-          .aboutme .row .info table tbody td img {
-            width: 70px;
-            height: 70px; }
-    .aboutme .row .foto {
-      background: url("../img/hJU32Smn2v0.jpg") no-repeat 0px center;
-      background-size: cover;
-      height: 510px;
-      margin-top: 20px;
-      box-shadow: 5px 5px 20px; }
-    .aboutme .row .col-md-4 img {
-      width: 270px;
-      height: 80px; }
 
 .service {
   font-size: 18px;
@@ -346,12 +349,14 @@ nav {
         margin-top: 20px; }
       .comments .comments-box .owl-carousel .item a {
         font-size: 16px; }
+    .comments .comments-box .col-sm-offset-1 {
+      margin-left: 0px; }
   .comments .comments-fon {
     background: url(../img/comments-fon.jpg) no-repeat;
     background-position-x: 200px !important;
     background-size: cover;
     margin: 0;
-    min-height: 600px;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -359,7 +364,7 @@ nav {
   .comments .comments-opacity {
     background: rgba(83, 10, 67, 0.6);
     width: 100%;
-    min-height: 600px;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0; }
@@ -543,7 +548,7 @@ nav {
     background: url(../img/contacts-fon.jpg) no-repeat;
     background-size: cover;
     margin: 0;
-    min-height: 560px;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -551,7 +556,7 @@ nav {
   .contacts .contacts-opacity {
     background: rgba(242, 56, 201, 0.6);
     width: 100%;
-    min-height: 560px;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0; }
@@ -601,7 +606,7 @@ footer {
   .aboutme {
     min-height: 780px; }
     .aboutme .about-box {
-      margin-left: -384px; }
+      margin-left: -375px; }
       .aboutme .about-box .row:nth-child(2) {
         margin-top: -10px; }
       .aboutme .about-box .row .info {
@@ -612,7 +617,7 @@ footer {
         margin-left: 10px; }
         .aboutme .about-box .row .info h1 {
           margin-bottom: 15px;
-          font-size: 24px; }
+          font-size: 26px; }
         .aboutme .about-box .row .info h4 {
           font-size: 18px; }
         .aboutme .about-box .row .info table {
@@ -632,15 +637,10 @@ footer {
         width: 200px;
         height: 60px; }
     .aboutme .about-fon {
-      margin: 0;
       min-height: 1100px;
-      top: 0;
-      left: 0;
-      width: 100%; }
-    .aboutme .about-opacity {
-      min-height: 880px;
-      top: 0;
-      left: 0; }
+      width: 100%;
+      background-size: 125%;
+      background-position-x: -200px !important; }
   .service {
     font-size: 16px;
     height: 475px; }
@@ -648,7 +648,6 @@ footer {
       height: 100%;
       width: 12%; }
     .service .service-box {
-      margin-left: -287px;
       width: 76%; }
       .service .service-box .hr {
         margin-top: 0px; }
@@ -658,7 +657,7 @@ footer {
           width: 20px;
           height: 20px; }
     .service h1 {
-      font-size: 24px; }
+      font-size: 26px; }
     .service .row .img img {
       width: 100%;
       margin-top: 25px; }
@@ -673,7 +672,7 @@ footer {
     .photo .photo-backgroung {
       min-height: 100%; }
     .photo h1 {
-      font-size: 24px; }
+      font-size: 26px; }
     .photo .grid {
       margin-top: 10px; }
       .photo .grid .grid-item {
@@ -702,6 +701,8 @@ footer {
           margin-top: 20px; }
         .comments .comments-box .owl-carousel .item a {
           font-size: 15px; }
+      .comments .comments-box .col-sm-offset-1 {
+        margin-left: 8.33333333%; }
     .comments .comments-fon {
       background-position-x: 0px !important;
       background-size: 140%;
@@ -712,7 +713,7 @@ footer {
     .contacts .contacts-box {
       margin-left: -375px; }
       .contacts .contacts-box h1 {
-        font-size-adjust: 26px; }
+        font-size: 26px; }
       .contacts .contacts-box .mycontacts {
         font-size: 19px; }
       .contacts .contacts-box .feedback-box {
@@ -723,30 +724,206 @@ footer {
       background-size: 160%;
       min-height: 100%; } }
 
-@media screen and (max-width: 768px) {
-  .aboutme {
-    margin: 0 auto; }
-    .aboutme .row {
+@media screen and (max-width: 479px) {
+  nav {
+    padding-top: 8px; }
+    nav .navbar-header {
+      display: block; }
+      nav .navbar-header .navbar-toggle {
+        margin-top: 0;
+        margin-right: 30px; }
+      nav .navbar-header .logo__img {
+        margin-top: -23px;
+        margin-left: 30px; }
+    nav .navbar-collapse .nav {
+      margin-top: -15px;
+      margin-right: 10px; }
+    nav .navbar-collapse .menu__list {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
-              flex-direction: column;
+              flex-direction: column; }
+      nav .navbar-collapse .menu__list .menu__item {
+        font-size: 15px; }
+  .main {
+    margin-top: 50px;
+    background-size: 340%;
+    background-position-x: -85px;
+    height: 365px; }
+    .main p {
+      font-size: 16px; }
+      .main p span {
+        font-size: 32px; }
+    .main .main-box {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 5;
       width: 100%;
-      margin-right: 0;
-      margin-left: 0; }
-      .aboutme .row .info {
-        padding: 10px 15px; }
-        .aboutme .row .info table {
+      height: 100%; }
+    .main .main-opacity {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 4;
+      width: 100%;
+      height: 100%;
+      background: rgba(234, 190, 236, 0.68); }
+  .aboutme {
+    min-height: 720px;
+    border-top: none; }
+    .aboutme .about-box {
+      margin-left: 0;
+      left: 0; }
+      .aboutme .about-box .row {
+        padding-top: 0; }
+        .aboutme .about-box .row:nth-child(2) {
+          margin-top: 0; }
+        .aboutme .about-box .row .info {
+          -webkit-box-flex: 0;
+              -ms-flex: none;
+                  flex: none; }
+          .aboutme .about-box .row .info h1 {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            font-size: 24px; }
+          .aboutme .about-box .row .info h4, .aboutme .about-box .row .info h2 {
+            font-size: 18px; }
+          .aboutme .about-box .row .info table {
+            font-size: 14px; }
+            .aboutme .about-box .row .info table tbody tr {
+              height: auto; }
+            .aboutme .about-box .row .info table tbody td {
+              padding-right: 10px;
+              padding-bottom: 5px; }
+        .aboutme .about-box .row .foto {
+          display: none; }
+        .aboutme .about-box .row .col-sm-4 img {
+          width: 85px;
+          height: 30px; }
+    .aboutme .about-fon {
+      background-size: 160%;
+      background-position-x: -100px !important; }
+  .service {
+    font-size: 14px;
+    height: 660px;
+    border-top: none; }
+    .service .service-background {
+      background-size: 525%; }
+    .service .service-box {
+      margin-left: -117px;
+      padding: 0px 10px; }
+      .service .service-box h1 {
+        font-size: 24px;
+        margin: 10px auto 0px; }
+      .service .service-box .hr {
+        margin-top: 0px; }
+        .service .service-box .hr .line {
+          width: 90px; }
+    .service .row {
+      margin-top: 0; }
+      .service .row .img img {
+        display: none; }
+      .service .row .price .service-title h2 {
+        font-size: 20px; }
+      .service .row .price .service-title img {
+        width: 25px;
+        height: 25px; }
+  .photo {
+    padding: 0px 30px;
+    min-height: 510px;
+    border-top: none; }
+    .photo .photo-backgroung {
+      min-height: 100%; }
+    .photo h1 {
+      font-size: 26px;
+      margin-top: 0px;
+      padding-top: 10px; }
+    .photo .grid {
+      margin-top: 10px; }
+      .photo .grid .grid-item {
+        float: left;
+        width: 25%;
+        padding: 20px 10px; }
+        .photo .grid .grid-item a img {
           width: 100%; }
-          .aboutme .row .info table tbody tr {
-            height: 50px;
-            font-size: 16px;
-            margin-bottom: 10px;
-            border-bottom: 2px solid #f56cce; }
-            .aboutme .row .info table tbody tr td {
-              padding-right: 20px; }
-              .aboutme .row .info table tbody tr td img {
-                width: 40px;
-                height: 40px; }
-      .aboutme .row .foto {
-        display: none; } }
+  .comments {
+    padding: 10px 0;
+    min-height: 575px;
+    width: 100% !important;
+    border-top: none; }
+    .comments .comments-box {
+      margin-left: 0px;
+      left: 0;
+      width: 308px; }
+      .comments .comments-box h1 {
+        margin: 10px auto 5px;
+        font-size: 24px; }
+      .comments .comments-box .owl-carousel .item {
+        margin-top: 10px; }
+        .comments .comments-box .owl-carousel .item h3 {
+          font-size: 20px; }
+        .comments .comments-box .owl-carousel .item img {
+          width: 190px; }
+        .comments .comments-box .owl-carousel .item p {
+          font-size: 14px;
+          margin-top: 10px; }
+        .comments .comments-box .owl-carousel .item a {
+          font-size: 12px;
+          margin-top: 10px; }
+      .comments .comments-box .owl-theme .owl-controlls {
+        margin-top: 0; }
+      .comments .comments-box .col-sm-offset-1 {
+        margin-left: 0; }
+    .comments .comments-fon {
+      background-position-x: 0px !important;
+      background-size: 140%;
+      min-height: 100%; }
+  .contacts {
+    padding: 10px 0;
+    min-height: 500px;
+    border-top: none; }
+    .contacts .contacts-box {
+      margin-left: 0;
+      left: 0;
+      width: 308px; }
+      .contacts .contacts-box h1 {
+        font-size: 24px; }
+      .contacts .contacts-box .mycontacts {
+        font-size: 17px; }
+      .contacts .contacts-box .social {
+        margin: 10px auto; }
+      .contacts .contacts-box .form .feedback-box {
+        width: 100%; }
+        .contacts .contacts-box .form .feedback-box p {
+          font-size: 14px; }
+        .contacts .contacts-box .form .feedback-box .column-left {
+          width: 100%; }
+          .contacts .contacts-box .form .feedback-box .column-left input {
+            margin: 4px;
+            padding: 5px; }
+          .contacts .contacts-box .form .feedback-box .column-left input[placeholder] {
+            font-size: 14px; }
+        .contacts .contacts-box .form .feedback-box .column-right {
+          width: 100%; }
+          .contacts .contacts-box .form .feedback-box .column-right textarea {
+            margin: 5px;
+            padding: 8px;
+            font-size: 14px;
+            height: 70px; }
+        .contacts .contacts-box .form .feedback-box .button {
+          margin: 0px;
+          width: 50%;
+          height: 25px;
+          font-size: 14px;
+          background: rgba(227, 62, 62, 0.5);
+          border: none; }
+    .contacts .contacts-fon {
+      background-size: 160%; }
+  footer {
+    height: 50px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; } }
