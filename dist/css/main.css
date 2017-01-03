@@ -51,14 +51,14 @@ nav {
     nav .navbar-header .logo__img {
       margin-top: -45px;
       width: 100px;
-      margin-left: 80px; }
+      margin-left: 70px; }
       nav .navbar-header .logo__img:hover {
         cursor: pointer; }
   nav .navbar-collapse {
     height: 80px; }
     nav .navbar-collapse .nav {
       margin-top: -15px;
-      margin-right: 80px; }
+      margin-right: 70px; }
     nav .navbar-collapse .menu__list {
       font-family: 'Barkentina';
       display: -webkit-box;
@@ -166,18 +166,11 @@ nav {
     top: 0;
     left: 0; }
   .aboutme .row {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    text-align: center;
     padding-top: 10px; }
     .aboutme .row:nth-child(2) {
       margin-top: 40px; }
     .aboutme .row .info {
-      -webkit-box-flex: 3;
-          -ms-flex: 3;
-              flex: 3;
       text-align: center;
       padding: 10px 100px 10px 0px; }
       .aboutme .row .info h1 {
@@ -194,9 +187,6 @@ nav {
             width: 70px;
             height: 70px; }
     .aboutme .row .foto {
-      -webkit-box-flex: 1;
-          -ms-flex: 1;
-              flex: 1;
       background: url("../img/hJU32Smn2v0.jpg") no-repeat 0px center;
       background-size: cover;
       height: 510px;
@@ -583,7 +573,7 @@ footer {
     footer a:hover {
       text-decoration: none; }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 992px) {
   nav {
     padding-top: 15px;
     height: 50px; }
@@ -609,34 +599,38 @@ footer {
       .main p span {
         font-size: 32px; }
   .aboutme {
-    margin: 0 auto;
-    min-height: 880px; }
+    min-height: 780px; }
     .aboutme .about-box {
-      left: 50%;
       margin-left: -384px; }
-      .aboutme .about-box .info {
+      .aboutme .about-box .row:nth-child(2) {
+        margin-top: -10px; }
+      .aboutme .about-box .row .info {
         -webkit-box-flex: 0;
             -ms-flex: none;
                 flex: none;
-        padding: 10px; }
-        .aboutme .about-box .info h1 {
+        padding: 10px;
+        margin-left: 10px; }
+        .aboutme .about-box .row .info h1 {
           margin-bottom: 15px;
           font-size: 24px; }
-        .aboutme .about-box .info h4 {
+        .aboutme .about-box .row .info h4 {
           font-size: 18px; }
-        .aboutme .about-box .info table {
+        .aboutme .about-box .row .info table {
           font-size: 16px; }
-          .aboutme .about-box .info table tbody tr {
+          .aboutme .about-box .row .info table tbody tr {
             height: 70px; }
-          .aboutme .about-box .info table tbody td {
+          .aboutme .about-box .row .info table tbody td {
             padding-right: 15px; }
-            .aboutme .about-box .info table tbody td img {
+            .aboutme .about-box .row .info table tbody td img {
               width: 45px;
               height: 45px; }
-      .aboutme .about-box .foto {
+      .aboutme .about-box .row .foto {
         height: 400px;
         margin-top: 115px;
-        background-size: 55%; }
+        box-shadow: none; }
+      .aboutme .about-box .row .col-sm-4 img {
+        width: 200px;
+        height: 60px; }
     .aboutme .about-fon {
       margin: 0;
       min-height: 1100px;
@@ -646,7 +640,88 @@ footer {
     .aboutme .about-opacity {
       min-height: 880px;
       top: 0;
-      left: 0; } }
+      left: 0; }
+  .service {
+    font-size: 16px;
+    height: 475px; }
+    .service .service-background {
+      height: 100%;
+      width: 12%; }
+    .service .service-box {
+      margin-left: -287px;
+      width: 76%; }
+      .service .service-box .hr {
+        margin-top: 0px; }
+        .service .service-box .hr .line {
+          width: 200px; }
+        .service .service-box .hr .brush {
+          width: 20px;
+          height: 20px; }
+    .service h1 {
+      font-size: 24px; }
+    .service .row .img img {
+      width: 100%;
+      margin-top: 25px; }
+    .service .row .price .service-title h2 {
+      font-size: 20px; }
+    .service .row .price .service-title img {
+      width: 30px;
+      height: 30px; }
+  .photo {
+    padding: 0px 30px;
+    min-height: 510px; }
+    .photo .photo-backgroung {
+      min-height: 100%; }
+    .photo h1 {
+      font-size: 24px; }
+    .photo .grid {
+      margin-top: 10px; }
+      .photo .grid .grid-item {
+        float: left;
+        width: 25%;
+        padding: 20px 10px; }
+        .photo .grid .grid-item a img {
+          width: 100%; }
+  .comments {
+    padding: 10px 0;
+    min-height: 573px;
+    width: 100% !important; }
+    .comments .comments-box {
+      margin-left: -375px; }
+      .comments .comments-box h1 {
+        margin-top: 25px;
+        font-size: 26px; }
+      .comments .comments-box .owl-carousel .item {
+        margin-top: 25px; }
+        .comments .comments-box .owl-carousel .item h3 {
+          font-size: 22px; }
+        .comments .comments-box .owl-carousel .item img {
+          width: 220px; }
+        .comments .comments-box .owl-carousel .item p {
+          font-size: 16px;
+          margin-top: 20px; }
+        .comments .comments-box .owl-carousel .item a {
+          font-size: 15px; }
+    .comments .comments-fon {
+      background-position-x: 0px !important;
+      background-size: 140%;
+      min-height: 100%; }
+  .contacts {
+    padding: 10px 0;
+    min-height: 533px; }
+    .contacts .contacts-box {
+      margin-left: -375px; }
+      .contacts .contacts-box h1 {
+        font-size-adjust: 26px; }
+      .contacts .contacts-box .mycontacts {
+        font-size: 19px; }
+      .contacts .contacts-box .feedback-box {
+        font-size: 18px; }
+      .contacts .contacts-box .social {
+        margin: 15px auto; }
+    .contacts .contacts-fon {
+      background-size: 160%;
+      min-height: 100%; } }
 
 @media screen and (max-width: 768px) {
   .aboutme {
