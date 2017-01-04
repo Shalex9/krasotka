@@ -46,7 +46,8 @@ var path = {
         html: 'src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
         js: 'src/js/script.js',//В стилях и скриптах нам понадобятся только main файлы
         libs: 'src/js/libs/*.js',
-        style: 'src/style/*.*',
+        style: 'src/style/main.scss',
+        stylelibs: 'src/style/libs/*.*',
         img: 'src/img/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
         fonts: 'src/fonts/**/*.*'
     },
@@ -101,6 +102,15 @@ gulp.task('style:build', function () {
         .pipe(sass()) //Скомпилируем
         .pipe(prefixer()) //Добавим вендорные префиксы
         // .pipe(cssmin()) //Сожмем
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(path.dist.css)) //И в dist
+        .pipe(reload({stream: true}));
+    gulp.src(path.src.stylelibs)
+        .pipe(concat('css-libs.min.css'))
+        .pipe(sourcemaps.init()) //То же самое что и с js
+        // .pipe(sass()) //Скомпилируем
+        .pipe(prefixer()) //Добавим вендорные префиксы
+        .pipe(cssmin()) //Сожмем
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.dist.css)) //И в dist
         .pipe(reload({stream: true}));
