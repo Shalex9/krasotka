@@ -36,6 +36,7 @@ body{
 .navbar.navbar-default.navbar-fixed-top{
     background: linear-gradient(to top, #f6d1ef, #f5eaf1);
 }
+section{border-top: 3px solid rgb(244,93,201);}
 
 nav{
     width: 100%;
@@ -150,12 +151,24 @@ nav{
             width: 25px;
         }
     }
-    .main-opacity{display: none;}
+    .main-box{
+        top: 0; left: 0;
+        z-index: 5;
+        width: 100%;
+        height: 100%;
+    }
+    .main-opacity{
+        top: 0; left: 0;
+        z-index: 4;
+        width: 100%;
+        height: 100%;
+        background: rgba(234,190,236,.68);
+        display: none;
+    }
 }
 
 .aboutme{
     position: relative;
-    border-top: 3px solid rgb(244,93,201);
     min-height: 880px;
     overflow: hidden;
     color: #000;
@@ -209,7 +222,7 @@ nav{
             }
         }
     }
-    .about-fon{
+    .about-background{
         background: url('../img/about-fon.jpg')  0 no-repeat fixed;
         background-size: cover;
         margin: 0;
@@ -231,7 +244,6 @@ nav{
 
 .service{
     font-size: 18px;
-    border-top: 3px solid rgb(244,93,201);
     position: relative;
     height: 560px;
     .service-background{
@@ -339,7 +351,6 @@ nav{
     width: 100%;
     text-align: center;
     min-height: 880px;
-    border-top: 3px solid rgb(244,93,201);
     .photo-backgroung{
         background: url('../img/1.png') no-repeat;
         background-size: cover;
@@ -354,25 +365,25 @@ nav{
     }
     h1{text-align: center;}
     .grid {
-            margin-top: 34px;
-            &:after {
-                content: '';
-                display: block;
-                clear: both;
-            }
-            .grid-item{
-                float: left;
-                // height: 300px;
-                width: 25%;
-                padding: 20px 10px;
-                overflow: hidden;
-                a{
-                    img{
-                        width: 100%;
-                    }
+        margin-top: 34px;
+        &:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .grid-item{
+            float: left;
+            // height: 300px;
+            width: 25%;
+            padding: 20px 10px;
+            overflow: hidden;
+            a{
+                img{
+                    width: 100%;
                 }
             }
-        }  //end grid
+        }
+    }  //end grid
 }
 
 .comments{
@@ -381,7 +392,6 @@ nav{
     position: relative;
     width: 100% !important;
     overflow: hidden;
-    border-top: 3px solid rgb(244,93,201);
     color: #fff;
     .comments-box{
         position: absolute;
@@ -411,7 +421,7 @@ nav{
         }
         .col-sm-offset-1{margin-left: 0px;}
     }
-    .comments-fon{
+    .comments-background{
         background: url(../img/comments-fon.jpg) no-repeat;
         background-position-x: 200px!important;
         background-size: cover;
@@ -436,7 +446,6 @@ nav{
     position: relative;
     width: 100% !important;
     overflow: hidden;
-    border-top: 3px solid rgb(244,93,201);
     color: #fff;
     .contacts-box{
         position: absolute;
@@ -553,7 +562,7 @@ nav{
             }
         }
     }
-    .contacts-fon{
+    .contacts-background{
         background: url(../img/contacts-fon.jpg) no-repeat;
         // background-attachment: fixed;
         background-size: cover;
@@ -674,7 +683,7 @@ footer{
                 }
             }
         }
-        .about-fon{
+        .about-background{
             min-height: 1100px;
             width:100%;
             background-size: 125%;
@@ -732,14 +741,7 @@ footer{
         .grid {
             margin-top: 10px;
             .grid-item{
-                float: left;
                 width: 25%;
-                padding: 20px 10px;
-                a{
-                    img{
-                        width: 100%;
-                    }
-                }
             }
         }  //end grid
     }
@@ -770,7 +772,7 @@ footer{
                 margin-left: 8.33333333%;
             }
         }
-        .comments-fon{
+        .comments-background{
             background-position-x: 0px!important;
             background-size: 140%;
             min-height: 100%;
@@ -789,7 +791,7 @@ footer{
             .feedback-box{font-size: 18px;}
             .social{margin: 15px auto;}
         }
-        .contacts-fon{
+        .contacts-background{
             background-size: 160%;
             min-height: 100%;
         }
@@ -797,8 +799,238 @@ footer{
 
 }
 
+@media screen and (max-width: 767px){
+    nav{
+        padding-top: 8px;
+        .navbar-header{
+            display: block;
+            .navbar-toggle{
+                margin-top: 0;
+                margin-right: 50px;
+            }
+            .logo{
+                &__img{
+                    margin-top: -23px;
+                    margin-left: 30px;
+                }
+            }
+        }
+        .navbar-collapse{
+            .nav{
+                margin-top: -15px;
+                margin-right: 10px;
+            }
+            .menu__list{
+                flex-direction: column;
+                .menu__item{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+    section{border-top: none;}
+    .container{width: 460px;}
+    .main{
+        margin-top: 50px;
+        padding: 30px 0px 20px;
+        background-position-x: -125px;
+        height: 515px;
+        p{
+            font-size: 17px;
+            span{
+                font-size: 32px;
+            }
+        }
+        .main-box{position: absolute;}
+        .main-opacity{
+            display: block;
+            position: absolute;
+        }
+    }
+
+    .aboutme{
+        min-height: 675px;
+        .about-box{
+            margin-left: -240px;
+            .row{
+                &:nth-child(2){
+                    margin-top: -10px;
+                }
+                .info{
+                    flex: none;
+                    padding: 10px;
+                    margin-left: 10px;
+                    h1{
+                        margin: 5px auto;
+                        font-size: 26px;
+                    }
+                }
+                h4, h2{font-size: 20px;margin: 5px auto;}
+                .foto{display: none;}
+                .col-sm-4{
+                    img{
+                        width: 140px;
+                        height: 45px;
+                    }
+                }
+            }
+        }
+        .about-background{
+            min-height: 1100px;
+            width:100%;
+            background-size: 125%;
+            background-position-x: -100px!important;
+        }
+    }
+
+    .service{
+        font-size: 14px;
+        height: 475px;
+        .service-background{
+            width: 10%;
+            background-size: 340%;
+        }
+        .service-box{
+            margin-left: -186px;
+            padding: 0px 10px;
+            h1{
+                font-size: 24px;
+                margin: 10px auto 0px;
+            }
+            .hr{
+                margin-top: 0px;
+                .line{
+                    width: 130px;
+                }
+            }
+        }
+        .row{
+            margin-top: 0;
+            .img{img{display: none;}}
+            .price{
+                .service-title{
+                    h2{font-size: 20px;}
+                    img{width: 25px;height: 25px;}
+                }
+            }
+        }
+    }
+
+    .photo{
+        min-height: 670px;
+        .photo-backgroung{background-size: 400%;}
+        h1{font-size: 26px;margin-top: 0px;padding-top: 10px;}
+        .grid {
+            .grid-item{
+                width: 33.333333%;
+            }
+        }  //end grid
+    }
+
+    .comments{
+        min-height: 480px;
+        .comments-box{
+            margin-left: 0px;
+            left: 0;
+            width: 460px;
+            margin-left: 0px;
+            h1{
+                margin: 10px auto 5px;
+                font-size: 24px;
+            }
+            .owl-carousel{
+                .item{
+                    margin-top: 10px;
+                    h3{font-size: 20px;}
+                    img{width: 190px;}
+                    p{
+                        font-size: 14px;
+                        margin-top: 10px;
+                    }
+                    a{font-size: 12px;margin-top: 10px;}
+                }
+            }
+            .owl-theme .owl-controlls{margin-top: 0;}
+            .col-sm-offset-1 {
+                margin-left: 0;
+            }
+        }
+        .comments-background{
+            background-position-x: 0px!important;
+            background-size: 140%;
+            min-height: 100%;
+        }
+    }
+
+    .contacts{
+        padding: 10px 0;
+        min-height: 520px;
+        .contacts-box{
+            margin-left: 0; left: 0;
+            width: 460px;
+            h1{font-size: 26px;}
+            .mycontacts{
+                font-size: 18px;
+            }
+            .social{margin: 10px auto;}
+            .form{
+                .feedback-box{
+                    width: 100%;
+                    p{font-size: 17px;}
+                    .column-left{
+                        width: 100%;
+                        input{
+                            margin: 4px;
+                            padding: 5px;
+                        }
+                        input[placeholder] {
+                            font-size: 16px;
+                        }
+                    }
+                    .column-right{
+                        width: 100%;
+                        textarea{
+                            margin: 5px;
+                            padding: 8px;
+                            font-size: 16px;
+                            height: 70px;
+                        }
+                    }
+                    .button{
+                        margin: 0px;
+                        width: 50%;
+                        height: 25px;
+                        font-size: 16px;
+                        background: rgba(227,62,62,.5);
+                        border: none;
+                    }
+                }
+            }
+        }
+        .contacts-background{
+            background-size: 270%;
+            background-position-x: -650px!important;
+        }
+    }
+
+    footer{
+        height: 50px;
+        flex-direction: column;
+        font-size: 15px;
+    }
+
+}
+
+@media screen and (max-width: 620px) {
+    .photo{
+        min-height: 1060px;
+        .grid{.grid-item{width: 50%}}
+    }
+}
 
 @media screen and (max-width: 479px){
+    section{border-top: none;}
+    .container{width: 300px;}
     nav{
         padding-top: 8px;
         .navbar-header{
@@ -839,27 +1071,15 @@ footer{
                 font-size: 32px;
             }
         }
-        .main-box{
-            position: absolute;
-            top: 0; left: 0;
-            z-index: 5;
-            width: 100%;
-            height: 100%;
-        }
+        .main-box{position: absolute;}
         .main-opacity{
             display: block;
             position: absolute;
-            top: 0; left: 0;
-            z-index: 4;
-            width: 100%;
-            height: 100%;
-            background: rgba(234,190,236,.68);
         }
     }
 
     .aboutme{
         min-height: 720px;
-        border-top: none;
         .about-box{
             margin-left: 0;
             left: 0;
@@ -869,8 +1089,7 @@ footer{
                 .info{
                     flex: none;
                     h1{
-                        margin-top: 5px;
-                        margin-bottom: 5px;
+                        margin: 5px auto;
                         font-size: 24px;
                     }
                     h4, h2{font-size: 18px;}
@@ -896,7 +1115,7 @@ footer{
                 }
             }
         }
-        .about-fon{
+        .about-background{
             background-size: 160%;
             background-position-x: -100px!important;
         }
@@ -905,9 +1124,8 @@ footer{
     .service{
         font-size: 14px;
         height: 660px;
-        border-top: none;
         .service-background{
-            background-size: 525%;
+            background-size: 600%;
         }
         .service-box{
             margin-left: -117px;
@@ -938,7 +1156,6 @@ footer{
     .photo{
         padding: 0px 30px;
         min-height: 510px;
-        border-top: none;
         .photo-backgroung{
             min-height: 100%;
         }
@@ -962,7 +1179,6 @@ footer{
         padding: 10px 0;
         min-height: 575px;
         width: 100% !important;
-        border-top: none;
         .comments-box{
             margin-left: 0px;
             left: 0;
@@ -971,83 +1187,26 @@ footer{
                 margin: 10px auto 5px;
                 font-size: 24px;
             }
-            .owl-carousel{
-                .item{
-                    margin-top: 10px;
-                    h3{font-size: 20px;}
-                    img{width: 190px;}
-                    p{
-                        font-size: 14px;
-                        margin-top: 10px;
-                    }
-                    a{font-size: 12px;margin-top: 10px;}
-                }
-            }
-            .owl-theme .owl-controlls{margin-top: 0;}
-            .col-sm-offset-1 {
-                margin-left: 0;
-            }
-        }
-        .comments-fon{
-            background-position-x: 0px!important;
-            background-size: 140%;
-            min-height: 100%;
         }
     }
 
     .contacts{
-        padding: 10px 0;
         min-height: 500px;
-        border-top: none;
         .contacts-box{
-            margin-left: 0; left: 0;
             width: 308px;
             h1{font-size: 24px;}
-            .mycontacts{
-                font-size: 17px;
-            }
-            .social{margin: 10px auto;}
+            .mycontacts{font-size: 17px;}
             .form{
                 .feedback-box{
-                    width: 100%;
                     p{font-size: 14px;}
-                    .column-left{
-                        width: 100%;
-                        input{
-                            margin: 4px;
-                            padding: 5px;
-                        }
-                        input[placeholder] {
-                            font-size: 14px;
-                        }
-                    }
-                    .column-right{
-                        width: 100%;
-                        textarea{
-                            margin: 5px;
-                            padding: 8px;
-                            font-size: 14px;
-                            height: 70px;
-                        }
-                    }
-                    .button{
-                        margin: 0px;
-                        width: 50%;
-                        height: 25px;
-                        font-size: 14px;
-                        background: rgba(227,62,62,.5);
-                        border: none;
-                    }
+                    .column-left{input[placeholder] {font-size: 14px;}}
+                    .column-right{textarea{font-size: 14px;}}
+                    .button{font-size: 14px;}
                 }
             }
         }
-        .contacts-fon{
-            background-size: 160%;
-        }
+        .contacts-background{background-size: 230%;background-position-x: -400px!important;}
     }
 
-    footer{
-        height: 50px;
-        flex-direction: column;
-    }
+    footer{font-size: 12px}
 }

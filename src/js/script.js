@@ -1,9 +1,9 @@
 $(function () {
 
-    if(document.body.clientWidth >= "768") {
+    if(document.body.clientWidth >= "480") {
         $('.owl-carousel').owlCarousel({
             autoPlay: 5000,
-            navigation : false, // показывать кнопки next и prev
+            navigation : false, 
             slideSpeed : 300,
             paginationSpeed : 400,
             items : 1,
@@ -41,6 +41,7 @@ $(function () {
 
     $('.grid').imagesLoaded( function() {
         $('.grid').isotope({
+            layoutMode: 'packery',
             itemSelector: '.grid-item',
             masonry: {
               columnWidth: '.grid-item'
@@ -52,7 +53,6 @@ $(function () {
    $('.nav a').on('click', function(event) {
     event.preventDefault();
      var scrollAnchor = $(this).attr('data-scroll');
-        //  scrollPoint = $('section[data-anchor="' + scrollAnchor + '"]').offset().top;
      $('body,html').animate({
          scrollTop: $('section[data-anchor="' + scrollAnchor + '"]').offset().top-50
      }, 1000, 'easeInOutExpo');
@@ -81,24 +81,24 @@ $(function () {
             }
      }).scroll();
 
-    if(document.body.clientWidth <= "992" & document.body.clientWidth >= "480") {
-        // $(window).resize(resizeBox);
-        // function resizeBox() {
-        //     var screenWidth = document.body.clientWidth;
-        //     var containerWidth = $(".container").width();
-        //     var marginleft = (containerWidth / 2) +10;
-        //     console.log("containerWidth", containerWidth);
-        //     console.log("marginleft", marginleft);
-        //     $('.resize-box').css('margin-left', - marginleft);
-        // }
-        // resizeBox();
+    if(document.body.clientWidth <= "992" && document.body.clientWidth >= "480") {
+        $(window).resize(resizeBox);
+        function resizeBox() {
+            var screenWidth = document.body.clientWidth;
+            var containerWidth = $(".container").width();
+            var marginleft = (containerWidth / 2);
+            // console.log("containerWidth", containerWidth);
+            // console.log("marginleft", marginleft);
+            $('.resize-box').css({'left': '50%' , 'margin-left': - marginleft});
+        }
+        resizeBox();
 
         $(window).resize(resizeServiceBox);
         function resizeServiceBox() {
             var screenWidth = document.body.clientWidth;
             var marginleft = (screenWidth - (screenWidth * 0.24)) / 2;
-            console.log("screenWidth", screenWidth);
-            console.log("marginleft", marginleft);
+            // console.log("screenWidth", screenWidth);
+            // console.log("marginleft", marginleft);
             $('.service-box').css('margin-left', - marginleft);
         }
         resizeServiceBox();
