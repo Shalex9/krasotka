@@ -39,7 +39,8 @@ body {
 
 .navbar.navbar-default.navbar-fixed-top {
   background: -webkit-linear-gradient(bottom, #f6d1ef, #f5eaf1);
-  background: linear-gradient(to top, #f6d1ef, #f5eaf1); }
+  background: linear-gradient(to top, #f6d1ef, #f5eaf1);
+  border-color: #f45dc9; }
 
 section {
   border-top: 3px solid #f45dc9; }
@@ -49,6 +50,9 @@ nav {
   padding-top: 30px;
   height: 80px;
   margin-right: 70px; }
+  nav .in > .menu__list {
+    background: -webkit-linear-gradient(bottom, #f6d1ef, #f5eaf1);
+    background: linear-gradient(to top, #f6d1ef, #f5eaf1); }
   nav .navbar-header {
     display: inline-block; }
     nav .navbar-header .logo__img {
@@ -741,8 +745,11 @@ footer {
       nav .navbar-header .navbar-toggle {
         margin-top: 0;
         margin-right: 50px; }
+      nav .navbar-header .navbar-brand {
+        height: auto;
+        padding: 0; }
       nav .navbar-header .logo__img {
-        margin-top: -23px;
+        margin-top: -8px;
         margin-left: 30px; }
     nav .navbar-collapse .nav {
       margin-top: -15px;

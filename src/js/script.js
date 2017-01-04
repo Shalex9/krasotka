@@ -1,5 +1,10 @@
 $(function () {
 
+    $('button.collapsed').on('click', function() {
+        $('div.collapse').toggleClass('in').css({'height':'250px', 'padding-top':'10px', 'border-top':'none'});
+    });
+
+
     if(document.body.clientWidth >= "480") {
         $('.owl-carousel').owlCarousel({
             autoPlay: 5000,

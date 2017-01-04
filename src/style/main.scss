@@ -35,6 +35,7 @@ body{
 }
 .navbar.navbar-default.navbar-fixed-top{
     background: linear-gradient(to top, #f6d1ef, #f5eaf1);
+    border-color: rgb(244,93,201);
 }
 section{border-top: 3px solid rgb(244,93,201);}
 
@@ -43,6 +44,7 @@ nav{
     padding-top: 30px;
     height: 80px;
     margin-right: 70px;
+    .in > .menu__list{background: linear-gradient(to top, #f6d1ef, #f5eaf1);}
     .navbar-header{
         display: inline-block;
         .logo{
@@ -810,9 +812,13 @@ footer{
                 margin-top: 0;
                 margin-right: 50px;
             }
+            .navbar-brand{
+                height: auto;
+                padding: 0;
+            }
             .logo{
                 &__img{
-                    margin-top: -23px;
+                    margin-top: -8px;
                     margin-left: 30px;
                 }
             }
