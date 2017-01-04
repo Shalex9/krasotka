@@ -415,6 +415,7 @@ nav{
                     margin-top: 20px;
                 }
                 a{
+                    color: #e8b6b6;
                     font-size: 16px;
                 }
             }
@@ -957,7 +958,8 @@ footer{
         }
         .comments-background{
             background-position-x: 0px!important;
-            background-size: 140%;
+            background-size: 145%;
+            background-position-y: 25px !important;
             min-height: 100%;
         }
     }
@@ -1008,8 +1010,9 @@ footer{
             }
         }
         .contacts-background{
-            background-size: 270%;
-            background-position-x: -650px!important;
+            background-size: 165%;
+            background-position-x: -315px !important;
+            background-position-y: 0px !important;
         }
     }
 
@@ -1147,31 +1150,17 @@ footer{
             .price{
                 .service-title{
                     h2{font-size: 20px;}
-                    img{width: 25px;height: 25px;}
+                    img{display: none;}
                 }
             }
         }
     }
 
     .photo{
-        padding: 0px 30px;
-        min-height: 510px;
-        .photo-backgroung{
-            min-height: 100%;
-        }
-        h1{font-size: 26px;margin-top: 0px;padding-top: 10px;}
+        min-height: 725px;
+        .photo-backgroung{background-size: 500%;}
         .grid {
-            margin-top: 10px;
-            .grid-item{
-                float: left;
-                width: 25%;
-                padding: 20px 10px;
-                a{
-                    img{
-                        width: 100%;
-                    }
-                }
-            }
+            .grid-item{width: 50%;}
         }  //end grid
     }
 
@@ -1187,6 +1176,11 @@ footer{
                 margin: 10px auto 5px;
                 font-size: 24px;
             }
+        }
+        .comments-background{
+            background-position-x: 0px !important;
+            background-size: 100%;
+            background-position-y: 170px !important;
         }
     }
 
@@ -1205,7 +1199,11 @@ footer{
                 }
             }
         }
-        .contacts-background{background-size: 230%;background-position-x: -400px!important;}
+        .contacts-background{
+            background-size: 230%;
+            background-position-x: -400px!important;
+            background-position-y: 0px !important;
+        }
     }
 
     footer{font-size: 12px}

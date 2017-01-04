@@ -359,6 +359,7 @@ nav {
         font-size: 18px;
         margin-top: 20px; }
       .comments .comments-box .owl-carousel .item a {
+        color: #e8b6b6;
         font-size: 16px; }
     .comments .comments-box .col-sm-offset-1 {
       margin-left: 0px; }
@@ -860,7 +861,8 @@ footer {
         margin-left: 0; }
     .comments .comments-background {
       background-position-x: 0px !important;
-      background-size: 140%;
+      background-size: 145%;
+      background-position-y: 25px !important;
       min-height: 100%; }
   .contacts {
     padding: 10px 0;
@@ -901,8 +903,9 @@ footer {
           background: rgba(227, 62, 62, 0.5);
           border: none; }
     .contacts .contacts-background {
-      background-size: 270%;
-      background-position-x: -650px !important; }
+      background-size: 165%;
+      background-position-x: -315px !important;
+      background-position-y: 0px !important; }
   footer {
     height: 50px;
     -webkit-box-orient: vertical;
@@ -1011,25 +1014,13 @@ footer {
       .service .row .price .service-title h2 {
         font-size: 20px; }
       .service .row .price .service-title img {
-        width: 25px;
-        height: 25px; }
+        display: none; }
   .photo {
-    padding: 0px 30px;
-    min-height: 510px; }
+    min-height: 725px; }
     .photo .photo-backgroung {
-      min-height: 100%; }
-    .photo h1 {
-      font-size: 26px;
-      margin-top: 0px;
-      padding-top: 10px; }
-    .photo .grid {
-      margin-top: 10px; }
-      .photo .grid .grid-item {
-        float: left;
-        width: 25%;
-        padding: 20px 10px; }
-        .photo .grid .grid-item a img {
-          width: 100%; }
+      background-size: 500%; }
+    .photo .grid .grid-item {
+      width: 50%; }
   .comments {
     padding: 10px 0;
     min-height: 575px;
@@ -1041,6 +1032,10 @@ footer {
       .comments .comments-box h1 {
         margin: 10px auto 5px;
         font-size: 24px; }
+    .comments .comments-background {
+      background-position-x: 0px !important;
+      background-size: 100%;
+      background-position-y: 170px !important; }
   .contacts {
     min-height: 500px; }
     .contacts .contacts-box {
@@ -1059,6 +1054,7 @@ footer {
         font-size: 14px; }
     .contacts .contacts-background {
       background-size: 230%;
-      background-position-x: -400px !important; }
+      background-position-x: -400px !important;
+      background-position-y: 0px !important; }
   footer {
     font-size: 12px; } }

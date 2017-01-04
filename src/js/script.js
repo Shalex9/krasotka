@@ -3,7 +3,7 @@ $(function () {
     if(document.body.clientWidth >= "480") {
         $('.owl-carousel').owlCarousel({
             autoPlay: 5000,
-            navigation : false, 
+            navigation : false,
             slideSpeed : 300,
             paginationSpeed : 400,
             items : 1,
@@ -81,7 +81,7 @@ $(function () {
             }
      }).scroll();
 
-    if(document.body.clientWidth <= "992" && document.body.clientWidth >= "480") {
+    if(document.body.clientWidth <= "992" && document.body.clientWidth >= "320") {
         $(window).resize(resizeBox);
         function resizeBox() {
             var screenWidth = document.body.clientWidth;

@@ -81,7 +81,7 @@ $(function () {
         }
     }).scroll();
 
-    if (document.body.clientWidth <= "992" && document.body.clientWidth >= "480") {
+    if (document.body.clientWidth <= "992" && document.body.clientWidth >= "320") {
         $(window).resize(resizeBox);
         function resizeBox() {
             var screenWidth = document.body.clientWidth;
