@@ -183,6 +183,8 @@ nav {
             text-align: left; }
           .aboutme .about-box .row .info table tbody td {
             padding-right: 50px; }
+            .aboutme .about-box .row .info table tbody td a {
+              color: #e8b6b6; }
             .aboutme .about-box .row .info table tbody td img {
               width: 70px;
               height: 70px; }

@@ -15,6 +15,7 @@
 //     gulp-babel-core:    npm install --save-dev babel-core
 //     gulp-babel-preset:  npm install --save-dev babel-preset-es2015
 //     gulp-babel:         npm install --save-dev gulp-babel
+//                         npm install --save-dev gulp-concat
 // Или все и сразу: npm install --save-dev gulp gulp-autoprefixer gulp-minify-css browser-sync gulp-imagemin imagemin-pngquant gulp-uglify gulp-sass gulp-sourcemaps gulp-rigger gulp-watch gulp-babel babel-core babel-preset-es2015
 
 var gulp = require('gulp'),
@@ -29,6 +30,7 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     rimraf = require('rimraf'),
     browserSync = require("browser-sync"),
+    concat = require("gulp-concat"),
     babel = require("gulp-babel"),
     reload = browserSync.reload;
 
@@ -42,8 +44,8 @@ var path = {
     },
     src: { //Пути откуда брать исходники
         html: 'src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
-        js: 'src/js/*.js',//В стилях и скриптах нам понадобятся только main файлы
-        // libs: 'src/js/libs/*.js',
+        js: 'src/js/script.js',//В стилях и скриптах нам понадобятся только main файлы
+        libs: 'src/js/libs/*.js',
         style: 'src/style/*.*',
         img: 'src/img/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
         fonts: 'src/fonts/**/*.*'
@@ -51,7 +53,7 @@ var path = {
     watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
         html: 'src/**/*.html',
         js: 'src/js/**/*.js',
-        // libs: 'src/js/libs/**/*.js',
+        libs: 'src/js/libs/*.js',
         style: 'src/style/**/*.*',
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
@@ -78,20 +80,20 @@ gulp.task('html:build', function () {
 gulp.task('js:build', function () {
     gulp.src(path.src.js) //Найдем наш main файл
         .pipe(rigger()) //Прогоним через rigger
-        .pipe(babel())
+        // .pipe(babel())
         // .pipe(sourcemaps.init()) //Инициализируем sourcemap
         // .pipe(uglify()) //Сожмем наш js
         // .pipe(sourcemaps.write()) //Пропишем карты
         .pipe(gulp.dest(path.dist.js)) //Выплюнем готовый файл в dist
         .pipe(reload({stream: true})); //И перезагрузим сервер
-    // gulp.src(path.src.libs)
-    //     .pipe(concat('libs.min.js'))
-    //     .pipe(rigger())
-    //     .pipe(sourcemaps.init()) //Инициализируем sourcemap
-    //     .pipe(uglify()) //Сожмем наш js
-    //     .pipe(sourcemaps.write()) //Пропишем карты
-    //     .pipe(gulp.dest(path.dist.js)) //Выплюнем готовый файл в dist
-    //     .pipe(reload({stream: true})); //И перезагрузим сервер
+    gulp.src(path.src.libs)
+        .pipe(concat('libs.min.js'))
+        .pipe(rigger())
+        .pipe(sourcemaps.init()) //Инициализируем sourcemap
+        .pipe(uglify()) //Сожмем наш js
+        .pipe(sourcemaps.write()) //Пропишем карты
+        .pipe(gulp.dest(path.dist.js)) //Выплюнем готовый файл в dist
+        .pipe(reload({stream: true})); //И перезагрузим сервер
 });
 gulp.task('style:build', function () {
     gulp.src(path.src.style) //Выберем наш main.scss
