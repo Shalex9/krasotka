@@ -42,14 +42,9 @@ body {
   background: linear-gradient(to top, #f6d1ef, #f5eaf1);
   border-color: #f45dc9; }
 
-section {
-  border-top: 3px solid #f45dc9; }
-
 nav {
-  width: 100%;
-  padding-top: 30px;
-  height: 80px;
-  margin-right: 70px; }
+  padding-top: 60px;
+  height: 80px; }
   nav .in > .menu__list {
     background: -webkit-linear-gradient(bottom, #f6d1ef, #f5eaf1);
     background: linear-gradient(to top, #f6d1ef, #f5eaf1); }
@@ -58,14 +53,14 @@ nav {
     nav .navbar-header .logo__img {
       margin-top: -45px;
       width: 100px;
-      margin-left: 70px; }
+      margin-left: 50px; }
       nav .navbar-header .logo__img:hover {
         cursor: pointer; }
   nav .navbar-collapse {
     height: 80px; }
     nav .navbar-collapse .nav {
       margin-top: -15px;
-      margin-right: 70px; }
+      margin-right: 50px; }
     nav .navbar-collapse .menu__list {
       font-family: 'Barkentina';
       display: -webkit-box;
@@ -314,7 +309,7 @@ nav {
   min-height: 880px; }
   .photo .photo-backgroung {
     background: url("../img/1.png") no-repeat;
-    background-size: cover;
+    background-size: 140%;
     width: 100%;
     min-height: 880px;
     position: absolute;
@@ -371,8 +366,8 @@ nav {
       margin-left: 0px; }
   .comments .comments-background {
     background: url(../img/comments-fon.jpg) no-repeat;
-    background-position-x: 200px !important;
-    background-size: cover;
+    background-position-x: 150px !important;
+    background-size: 130%;
     margin: 0;
     height: 100%;
     position: absolute;
@@ -563,7 +558,7 @@ nav {
         color: #fff; }
   .contacts .contacts-background {
     background: url(../img/contacts-fon.jpg) no-repeat;
-    background-size: cover;
+    background-size: 120%;
     margin: 0;
     height: 100%;
     position: absolute;
@@ -595,6 +590,19 @@ footer {
     footer a:hover {
       text-decoration: none; }
 
+@media screen and (max-width: 1200px) {
+  .aboutme {
+    min-height: 890px; }
+  .service {
+    font-size: 15px; }
+    .service .row .img img {
+      width: 50%; }
+    .service .row .price .service-title img {
+      width: 40px;
+      height: 40px; }
+  .photo {
+    min-height: 700px; } }
+
 @media screen and (max-width: 992px) {
   nav {
     padding-top: 15px;
@@ -624,35 +632,36 @@ footer {
     min-height: 780px; }
     .aboutme .about-box {
       margin-left: -375px; }
-      .aboutme .about-box .row:nth-child(2) {
-        margin-top: -10px; }
-      .aboutme .about-box .row .info {
-        -webkit-box-flex: 0;
-            -ms-flex: none;
-                flex: none;
-        padding: 10px;
-        margin-left: 10px; }
-        .aboutme .about-box .row .info h1 {
-          margin-bottom: 15px;
-          font-size: 26px; }
-        .aboutme .about-box .row .info h4 {
-          font-size: 18px; }
-        .aboutme .about-box .row .info table {
-          font-size: 16px; }
-          .aboutme .about-box .row .info table tbody tr {
-            height: 70px; }
-          .aboutme .about-box .row .info table tbody td {
-            padding-right: 15px; }
-            .aboutme .about-box .row .info table tbody td img {
-              width: 45px;
-              height: 45px; }
-      .aboutme .about-box .row .foto {
-        height: 400px;
-        margin-top: 115px;
-        box-shadow: none; }
-      .aboutme .about-box .row .col-sm-4 img {
-        width: 200px;
-        height: 60px; }
+      .aboutme .about-box .row {
+        padding: 0 50px; }
+        .aboutme .about-box .row:nth-child(2) {
+          margin-top: -10px; }
+        .aboutme .about-box .row .info {
+          -webkit-box-flex: 0;
+              -ms-flex: none;
+                  flex: none;
+          padding: 10px; }
+          .aboutme .about-box .row .info h1 {
+            margin-bottom: 15px;
+            font-size: 26px; }
+          .aboutme .about-box .row .info h4 {
+            font-size: 18px; }
+          .aboutme .about-box .row .info table {
+            font-size: 16px; }
+            .aboutme .about-box .row .info table tbody tr {
+              height: 70px; }
+            .aboutme .about-box .row .info table tbody td {
+              padding-right: 15px; }
+              .aboutme .about-box .row .info table tbody td img {
+                width: 45px;
+                height: 45px; }
+        .aboutme .about-box .row .foto {
+          height: 400px;
+          margin-top: 115px;
+          box-shadow: none; }
+        .aboutme .about-box .row .col-sm-4 img {
+          width: 200px;
+          height: 60px; }
     .aboutme .about-background {
       min-height: 1100px;
       width: 100%;
@@ -676,7 +685,7 @@ footer {
     .service h1 {
       font-size: 26px; }
     .service .row .img img {
-      width: 100%;
+      width: 50%;
       margin-top: 25px; }
     .service .row .price .service-title h2 {
       font-size: 20px; }
@@ -1067,3 +1076,6 @@ footer {
       background-position-y: 0px !important; }
   footer {
     font-size: 12px; } }
+
+section:not(:first-child) {
+  border-top: 3px solid #f45dc9; }

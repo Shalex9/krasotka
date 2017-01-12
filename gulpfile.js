@@ -98,11 +98,12 @@ gulp.task('js:build', function () {
 });
 gulp.task('style:build', function () {
     gulp.src(path.src.style) //Выберем наш main.scss
+        // .pipe(concat('style.css'))
         // .pipe(sourcemaps.init()) //То же самое что и с js
         .pipe(sass()) //Скомпилируем
         .pipe(prefixer()) //Добавим вендорные префиксы
         // .pipe(cssmin()) //Сожмем
-        .pipe(sourcemaps.write())
+        // .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.dist.css)) //И в dist
         .pipe(reload({stream: true}));
     gulp.src(path.src.stylelibs)
@@ -117,11 +118,11 @@ gulp.task('style:build', function () {
 });
 gulp.task('image:build', function () {
     gulp.src(path.src.img) //Выберем наши картинки
-        // .pipe(imagemin({ //Сожмем их
-        //     progressive: true,
-        //     svgoPlugins: [{removeViewBox: false}],
-        //     interlaced: true
-        // }))
+        .pipe(imagemin({ //Сожмем их
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            interlaced: true
+        }))
         .pipe(gulp.dest(path.dist.img)) //И бросим в dist
         .pipe(reload({stream: true}));
 });

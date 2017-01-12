@@ -86,7 +86,7 @@ $(function () {
             }
      }).scroll();
 
-    if(document.body.clientWidth <= "992" && document.body.clientWidth >= "320") {
+    if(document.body.clientWidth <= "1200" && document.body.clientWidth >= "320") {
         $(window).resize(resizeBox);
         function resizeBox() {
             var screenWidth = document.body.clientWidth;
@@ -101,13 +101,16 @@ $(function () {
         $(window).resize(resizeServiceBox);
         function resizeServiceBox() {
             var screenWidth = document.body.clientWidth;
-            var marginleft = (screenWidth - (screenWidth * 0.24)) / 2;
+            var boxWidth = screenWidth - (screenWidth * 0.24);
+            var marginleft = boxWidth / 2;
             // console.log("screenWidth", screenWidth);
+            // console.log("boxWidth", boxWidth);
             // console.log("marginleft", marginleft);
-            $('.service-box').css('margin-left', - marginleft);
+            $('.service-box').css({'width': boxWidth, 'margin-left': (- marginleft) });
         }
         resizeServiceBox();
     }
+
 
 
 });
