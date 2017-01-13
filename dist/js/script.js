@@ -91,7 +91,7 @@ $(function () {
         function resizeBox() {
             var screenWidth = document.body.clientWidth;
             var containerWidth = $(".container").width();
-            var marginleft = (containerWidth / 2);
+            var marginleft = (containerWidth / 2) +18;
             // console.log("containerWidth", containerWidth);
             // console.log("marginleft", marginleft);
             $('.resize-box').css({'left': '50%' , 'margin-left': - marginleft});

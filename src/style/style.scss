@@ -1,3 +1,11 @@
+/*
+Theme Name: Krasava
+Theme URI: http://wordpress.local/public_html/
+Description: test my site
+Author: bestofthebest
+Version: 1.0
+*/
+
 @font-face {
     font-family: 'Barkentina';
     src: local('Barkentina 1'), url('../fonts/barkentina1.woff2') format('woff2'), url('../fonts/barkentina1.woff') format('woff'), url('../fonts/barkentina1.ttf') format('truetype');
@@ -424,7 +432,6 @@ body{
         }
         .comments-background{
             background: url(../img/comments-fon.jpg) no-repeat;
-            background-position-x: 150px!important;
             background-size: 130%;
             margin: 0;
             height: 100%;
@@ -566,7 +573,7 @@ body{
         .contacts-background{
             background: url(../img/contacts-fon.jpg) no-repeat;
             // background-attachment: fixed;
-            background-size: 120%;
+            background-size: 125%;
             margin: 0;
             height: 100%;
             position:absolute;
@@ -618,7 +625,6 @@ body{
 }
 
 @media screen and (max-width: 992px){
-    // .container{width: 1040px}
     nav{
         padding-top: 15px;
         height: 50px;
@@ -878,10 +884,10 @@ body{
     }
 
     .aboutme{
-        min-height: 675px;
+        min-height: 690px;
         .about-box{
             margin-left: -240px;
-            .row{
+            .row{margin-top: 5px;
                 &:nth-child(2){
                     margin-top: -10px;
                 }
@@ -898,8 +904,8 @@ body{
                 .foto{display: none;}
                 .col-sm-4{
                     img{
-                        width: 140px;
-                        height: 45px;
+                        width: 100px;
+                        height: 30px;
                     }
                 }
             }
@@ -1061,7 +1067,7 @@ body{
 
 @media screen and (max-width: 479px){
     section{border-top: none;}
-    .container{width: 300px;}
+    .container{width: 310px;}
     nav{
         padding-top: 8px;
         .navbar-header{
@@ -1069,12 +1075,6 @@ body{
             .navbar-toggle{
                 margin-top: 0;
                 margin-right: 30px;
-            }
-            .logo{
-                &__img{
-                    margin-top: -23px;
-                    margin-left: 30px;
-                }
             }
         }
         .navbar-collapse{
@@ -1110,12 +1110,12 @@ body{
     }
 
     .aboutme{
-        min-height: 720px;
+        min-height: 700px;
         .about-box{
             margin-left: 0;
             left: 0;
             .row{
-                padding-top: 0;
+                padding: 0;
                 &:nth-child(2){margin-top: 0;}
                 .info{
                     flex: none;
@@ -1125,7 +1125,7 @@ body{
                     }
                     h4, h2{font-size: 18px;}
                     table{
-                        font-size: 14px;
+                        font-size: 15px;
                         tbody{
                             tr{
                                 height: auto;
@@ -1147,8 +1147,8 @@ body{
             }
         }
         .about-background{
-            background-size: 160%;
-            background-position-x: -100px!important;
+            background-size: 210%;
+            background-position-x: -180px!important;
         }
     }
 
@@ -1194,7 +1194,7 @@ body{
 
     .comments{
         padding: 10px 0;
-        min-height: 575px;
+        min-height: 515px;
         width: 100% !important;
         .comments-box{
             margin-left: 0px;
@@ -1228,13 +1228,13 @@ body{
             }
         }
         .contacts-background{
-            background-size: 230%;
+            background-size: 260%;
             background-position-x: -400px!important;
             background-position-y: 0px !important;
         }
     }
 
-    footer{font-size: 12px}
+    footer{font-size: 14px}
 }
 
 section:not(:first-child){border-top: 3px solid rgb(244,93,201);}
