@@ -1,0 +1,187 @@
+@font-face {
+    font-family: 'Barkentina';
+    src: local('Barkentina 1'), url('../fonts/barkentina1.woff2') format('woff2'), url('../fonts/barkentina1.woff') format('woff'), url('../fonts/barkentina1.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'AMG Anahit';
+    src: local('AMG Anahit Semi Serif'), url('../fonts/amganahitsemiserif.woff2') format('woff2'), url('../fonts/amganahitsemiserif.woff') format('woff'), url('../fonts/amganahitsemiserif.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "AMG Anahit";
+    height: 100%;
+}
+.clearfix{clear: both;}
+nav{
+    padding-top: 60px;
+    height: 80px;
+    .in > .menu__list{background: linear-gradient(to top, #f6d1ef, #f5eaf1);}
+    .navbar-header{
+        display: inline-block;
+        .logo{
+            &__img{
+                margin-top: -45px;
+                width: 100px;
+                margin-left: 50px;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .navbar-collapse{
+        height: 80px;
+        .nav{
+            margin-top: -15px;
+            margin-right: 50px;
+        }
+        .menu__list{
+            font-family: 'Barkentina';
+            display: flex;
+            justify-content: space-around;
+            .menu__item{
+                font-size: 18px;
+                font-weight: bold;
+                color: #e4691a;
+                margin-left: 10px;
+                list-style-type: none;
+                .menu__link{
+                    text-decoration: none;
+                    color: #e4691a;
+                    &.active{
+                        color: #832609;
+                        background-color: transparent;
+                        background-image: none;
+                        box-shadow: none;
+                    }
+                    &:hover{
+                        cursor: pointer;
+                        background-color: transparent;
+                        background-image: none;
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+    }
+    .navbar-right{
+        float: right;
+    }
+}
+footer{
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(to top, #f6d1ef, #f5eaf1);
+    a{
+        text-decoration: none;
+        &:hover{text-decoration: none;}
+    }
+}
+
+@media screen and (max-width: 992px){
+    nav{
+        padding-top: 15px;
+        height: 50px;
+        .navbar-header{
+            display: inline-block;
+            .logo{
+                &__img{
+                    margin-top: -30px;
+                    width: 60px;
+                    margin-left: 10px;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .navbar-collapse{
+            .nav{
+                margin-top: -15px;
+                margin-right: 10px;
+            }
+            .menu__list{
+                .menu__item{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px){
+    nav{
+        padding-top: 8px;
+        .navbar-header{
+            display: block;
+            .navbar-toggle{
+                margin-top: 0;
+                margin-right: 50px;
+            }
+            .navbar-brand{
+                height: auto;
+                padding: 0;
+            }
+            .logo{
+                &__img{
+                    margin-top: -8px;
+                    margin-left: 30px;
+                }
+            }
+        }
+        .navbar-collapse{
+            .nav{
+                margin-top: -15px;
+                margin-right: 10px;
+            }
+            .menu__list{
+                flex-direction: column;
+                .menu__item{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+    footer{
+        height: 50px;
+        flex-direction: column;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 479px){
+    section{border-top: none;}
+    .container{width: 310px;}
+    nav{
+        padding-top: 8px;
+        .navbar-header{
+            display: block;
+            .navbar-toggle{
+                margin-top: 0;
+                margin-right: 30px;
+            }
+        }
+        .navbar-collapse{
+            .nav{
+                margin-top: -15px;
+                margin-right: 10px;
+            }
+            .menu__list{
+                flex-direction: column;
+                .menu__item{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+    footer{font-size: 14px}
+}

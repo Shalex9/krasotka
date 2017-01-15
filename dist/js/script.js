@@ -1,23 +1,30 @@
 $(function () {
+    var screenWidth = document.body.clientWidth;
 
     $('button.collapsed').on('click', function() {
         $('div.collapse').toggleClass('in').css({'height':'250px', 'padding-top':'10px', 'border-top':'none'});
     });
 
+    $('.writereview').one('click', function() {
+        if(screenWidth>='992'){$('.comments').animate({height: "840px"}, 300, 'easeInOutExpo');}
+        if(screenWidth>='768' && screenWidth<='992'){$('.comments').animate({height: "860px"}, 300, 'easeInOutExpo');}
+        if(screenWidth>='480' && screenWidth<='767'){$('.comments').animate({height: "740px"}, 300, 'easeInOutExpo');}
+        if(screenWidth<='480'){$('.comments').animate({height: "790px"}, 300, 'easeInOutExpo');}
+        if($(".review-box").is(":hidden"))$(".review-box").slideDown("slow");
+        $(this).removeClass('hvr-grow').css("cursor", "text");
+    });
 
-    if(document.body.clientWidth >= "480") {
-        $('.owl-carousel').owlCarousel({
-            autoPlay: 5000,
-            navigation : false,
-            slideSpeed : 300,
-            paginationSpeed : 400,
-            items : 1,
-            itemsDesktop : false,
-            itemsDesktopSmall : false,
-            itemsTablet: false,
-            itemsMobile : false
-        });
-    }
+    $('.owl-carousel').owlCarousel({
+        autoPlay: 5000,
+        navigation : false,
+        slideSpeed : 300,
+        paginationSpeed : 400,
+        items : 1,
+        itemsDesktop : false,
+        itemsDesktopSmall : false,
+        itemsTablet: false,
+        itemsMobile : false
+    });
 
     $('.owl-carousel-comments-box').owlCarousel({
         autoPlay: 10000,
@@ -55,7 +62,7 @@ $(function () {
     });
 
     // Scroll
-   $('.nav a').on('click', function(event) {
+   $('.nav a:not:nth-child(4)').on('click', function(event) {
     event.preventDefault();
      var scrollAnchor = $(this).attr('data-scroll');
      $('body,html').animate({
@@ -73,7 +80,7 @@ $(function () {
          }
        });
        var top_scroll = $(this).scrollTop();
-            if (document.body.clientWidth >= "992") {
+            if (screenWidth >= "992") {
                 if(top_scroll > 0) {
                     $('.navbar').css('height', '50px');
                     $('nav').css('padding-top', '15px');
@@ -86,21 +93,18 @@ $(function () {
             }
      }).scroll();
 
-    if(document.body.clientWidth <= "1200" && document.body.clientWidth >= "320") {
+    if(screenWidth <= "1200" && screenWidth >= "320") {
         $(window).resize(resizeBox);
         function resizeBox() {
-            var screenWidth = document.body.clientWidth;
             var containerWidth = $(".container").width();
             var marginleft = (containerWidth / 2) +18;
-            // console.log("containerWidth", containerWidth);
-            // console.log("marginleft", marginleft);
             $('.resize-box').css({'left': '50%' , 'margin-left': - marginleft});
         }
         resizeBox();
 
         $(window).resize(resizeServiceBox);
         function resizeServiceBox() {
-            var screenWidth = document.body.clientWidth;
+            // var screenWidth = document.body.clientWidth;
             var boxWidth = screenWidth - (screenWidth * 0.24);
             var marginleft = boxWidth / 2;
             // console.log("screenWidth", screenWidth);
@@ -110,7 +114,4 @@ $(function () {
         }
         resizeServiceBox();
     }
-
-
-
 });

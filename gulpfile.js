@@ -46,7 +46,7 @@ var path = {
         html: 'src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
         js: 'src/js/script.js',//В стилях и скриптах нам понадобятся только main файлы
         libs: 'src/js/libs/*.js',
-        style: 'src/style/style.scss',
+        style: 'src/style/*.scss',
         stylelibs: 'src/style/libs/*.*',
         img: 'src/img/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
         fonts: 'src/fonts/**/*.*'
