@@ -196,7 +196,7 @@ nav {
               width: 70px;
               height: 70px; }
       .aboutme .about-box .row .foto {
-        background: url("../img/hJU32Smn2v0.jpg") no-repeat 0px center;
+        background: url("../img/myFoto.jpg") no-repeat 0px center;
         background-size: cover;
         height: 510px;
         margin-top: 20px;
@@ -226,16 +226,16 @@ nav {
   font-size: 18px;
   position: relative;
   height: 560px; }
-  .service .service-background {
-    background-size: cover;
-    height: 560px;
-    width: 164px; }
   .service .backgr-left {
     float: left;
     background: url("../img/banner-l.jpg") no-repeat; }
   .service .backgr-right {
     float: right;
     background: url("../img/banner-r.jpg") no-repeat; }
+  .service .service-background {
+    background-size: 108%;
+    height: 560px;
+    width: 164px; }
   .service .service-box {
     position: absolute;
     z-index: 4;
@@ -316,7 +316,7 @@ nav {
   text-align: center;
   min-height: 880px; }
   .photo .photo-backgroung {
-    background: url("../img/1.png") no-repeat;
+    background: url("../img/photo-background.jpg") no-repeat;
     background-size: 140%;
     width: 100%;
     min-height: 880px;
@@ -329,8 +329,15 @@ nav {
     opacity: 0.6; }
   .photo h1 {
     text-align: center; }
+  .photo .more-foto {
+    font-size: 22px;
+    color: #832609;
+    text-decoration: none; }
+    .photo .more-foto:hover {
+      text-decoration: none;
+      color: #e8b6b6; }
   .photo .grid {
-    margin-top: 34px; }
+    margin-top: 5px; }
     .photo .grid:after {
       content: '';
       display: block;
@@ -362,7 +369,7 @@ nav {
       margin-top: 50px;
       text-align: center; }
       .comments .comments-box .owl-carousel .item img {
-        width: 250px;
+        width: 200px;
         height: auto; }
       .comments .comments-box .owl-carousel .item p {
         font-size: 18px;
@@ -370,6 +377,8 @@ nav {
       .comments .comments-box .owl-carousel .item a {
         color: #e8b6b6;
         font-size: 16px; }
+      .comments .comments-box .owl-carousel .item:nth-child(2) img {
+        height: 150px; }
     .comments .comments-box .col-sm-offset-1 {
       margin-left: 0px; }
     .comments .comments-box .writereview {
@@ -607,6 +616,8 @@ footer {
       text-decoration: none; }
 
 @media screen and (max-width: 1200px) {
+  nav .navbar-collapse .menu__list .menu__item {
+    font-size: 16px; }
   .aboutme {
     min-height: 890px; }
   .service {
@@ -636,6 +647,8 @@ footer {
       margin-right: 10px; }
     nav .navbar-collapse .menu__list .menu__item {
       font-size: 15px; }
+      nav .navbar-collapse .menu__list .menu__item a {
+        padding: 15px 10px; }
   .main {
     margin-top: 35px;
     padding: 30px 0px 20px;
@@ -715,6 +728,8 @@ footer {
       min-height: 100%; }
     .photo h1 {
       font-size: 26px; }
+    .photo .more-foto {
+      font-size: 18px; }
     .photo .grid {
       margin-top: 10px; }
       .photo .grid .grid-item {
@@ -788,6 +803,10 @@ footer {
               flex-direction: column; }
       nav .navbar-collapse .menu__list .menu__item {
         font-size: 15px; }
+        nav .navbar-collapse .menu__list .menu__item a {
+          line-height: 10px; }
+    nav .navbar-collapse.in {
+      height: 285px !important; }
   section {
     border-top: none; }
   .container {
@@ -980,6 +999,8 @@ footer {
               flex-direction: column; }
       nav .navbar-collapse .menu__list .menu__item {
         font-size: 15px; }
+        nav .navbar-collapse .menu__list .menu__item a {
+          line-height: 5px; }
   .main {
     margin-top: 50px;
     background-size: 500%;

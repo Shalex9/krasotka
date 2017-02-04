@@ -3,6 +3,9 @@ $(function () {
 
     $('button.collapsed').on('click', function() {
         $('div.collapse').toggleClass('in').css({'height':'250px', 'padding-top':'10px', 'border-top':'none'});
+        // $('.nav a').on('click', function() {
+        //     $('div.collapse').removeClass('in');
+        // }
     });
 
     $('.writereview').one('click', function() {
@@ -62,7 +65,7 @@ $(function () {
     });
 
     // Scroll
-   $('.nav a:not:nth-child(4)').on('click', function(event) {
+   $('.nav a.scroll').on('click', function(event) {
     event.preventDefault();
      var scrollAnchor = $(this).attr('data-scroll');
      $('body,html').animate({

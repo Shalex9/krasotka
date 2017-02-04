@@ -108,11 +108,11 @@ gulp.task('style:build', function () {
         .pipe(reload({stream: true}));
     gulp.src(path.src.stylelibs)
         .pipe(concat('css-libs.min.css'))
-        .pipe(sourcemaps.init()) //То же самое что и с js
+        // .pipe(sourcemaps.init()) //То же самое что и с js
         // .pipe(sass()) //Скомпилируем
-        .pipe(prefixer()) //Добавим вендорные префиксы
+        // .pipe(prefixer()) //Добавим вендорные префиксы
         .pipe(cssmin()) //Сожмем
-        .pipe(sourcemaps.write())
+        // .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.dist.css)) //И в dist
         .pipe(reload({stream: true}));
 });

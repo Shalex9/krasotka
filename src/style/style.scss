@@ -219,7 +219,7 @@ body{
                     }
                 }
                 .foto{
-                    background: url('../img/hJU32Smn2v0.jpg') no-repeat 0px center;
+                    background: url('../img/myFoto.jpg') no-repeat 0px center;
                     background-size: cover;
                     height: 510px;
                     margin-top: 20px;
@@ -257,11 +257,6 @@ body{
         font-size: 18px;
         position: relative;
         height: 560px;
-        .service-background{
-            background-size: cover;
-            height: 560px;
-            width: 164px;
-        }
         .backgr-left{
             float: left;
             background: url('../img/banner-l.jpg') no-repeat;
@@ -269,6 +264,11 @@ body{
         .backgr-right{
             float: right;
             background: url('../img/banner-r.jpg') no-repeat;
+        }
+        .service-background{
+            background-size: 108%;
+            height: 560px;
+            width: 164px;
         }
         .service-box{
             position: absolute;
@@ -363,7 +363,7 @@ body{
         text-align: center;
         min-height: 880px;
         .photo-backgroung{
-            background: url('../img/1.png') no-repeat;
+            background: url('../img/photo-background.jpg') no-repeat;
             background-size: 140%;
             width: 100%;
             min-height: 880px;
@@ -375,8 +375,23 @@ body{
             opacity: 0.6;
         }
         h1{text-align: center;}
+        .more-foto{
+            font-size: 22px;
+            color: #832609;
+            text-decoration: none;
+            // text-align: center;
+            // width: 250px;
+            // height: 25px;
+            // border-radius: 5px;
+            // background: rgba(227,62,62,.5);
+            // border: 2px solid #fff;
+            &:hover{
+                text-decoration: none;
+                color: #e8b6b6;
+            }
+        }
         .grid {
-            margin-top: 34px;
+            margin-top: 5px;
             &:after {
                 content: '';
                 display: block;
@@ -418,7 +433,7 @@ body{
                     margin-top: 50px;
                     text-align: center;
                     img{
-                        width: 250px;
+                        width: 200px;
                         height: auto;
                     }
                     p{
@@ -429,6 +444,7 @@ body{
                         color: #e8b6b6;
                         font-size: 16px;
                     }
+                    &:nth-child(2){img{height: 150px}}
                 }
             }
             .col-sm-offset-1{margin-left: 0px;}
@@ -613,6 +629,15 @@ body{
     }
 
 @media screen and (max-width: 1200px){
+    nav{
+        .navbar-collapse{
+            .menu__list{
+                .menu__item{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
     .aboutme{min-height: 890px;}
     .service{
         font-size: 15px;
@@ -660,6 +685,9 @@ body{
             .menu__list{
                 .menu__item{
                     font-size: 15px;
+                    a{
+                        padding: 15px 10px;
+                    }
                 }
             }
         }
@@ -780,6 +808,9 @@ body{
             min-height: 100%;
         }
         h1{font-size: 26px;}
+        .more-foto{
+            font-size: 18px;
+        }
         .grid {
             margin-top: 10px;
             .grid-item{
@@ -871,9 +902,11 @@ body{
                 flex-direction: column;
                 .menu__item{
                     font-size: 15px;
+                    a{line-height: 10px}
                 }
             }
         }
+        .navbar-collapse.in{height: 285px!important}
     }
     section{border-top: none;}
     .container{width: 460px;}
@@ -1096,6 +1129,7 @@ body{
                 flex-direction: column;
                 .menu__item{
                     font-size: 15px;
+                    a{line-height: 5px;}
                 }
             }
         }

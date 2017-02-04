@@ -19,8 +19,28 @@ body{
     height: 100%;
 }
 .clearfix{clear: both;}
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+.navbar.navbar-default.navbar-fixed-top{
+    background: linear-gradient(to top, #f6d1ef, #f5eaf1);
+    border-color: rgb(244,93,201);
+}
+
 nav{
-    padding-top: 60px;
+    padding-top: 30px;
     height: 80px;
     .in > .menu__list{background: linear-gradient(to top, #f6d1ef, #f5eaf1);}
     .navbar-header{
@@ -75,6 +95,33 @@ nav{
         float: right;
     }
 }
+.aktcii{
+    height: 620px;
+    .aktcii-background{
+        background-size: cover;
+        height: 100%;
+        width: 12%;
+    }
+    .backgr-left{
+        float: left;
+        background: url('../img/banner-l.jpg') no-repeat;
+    }
+    .backgr-right{
+        float: right;
+        background: url('../img/banner-r.jpg') no-repeat;
+    }
+    .aktcii-box{
+        float: left;
+        width: 76%;
+        padding: 110px 50px 0px;
+        h3{text-align: center;}
+        p{
+            font-size: 18px;
+            margin-top: 20px;
+            span{font-weight: bold;}
+        }
+    }
+}
 footer{
     height: 40px;
     display: flex;
@@ -84,6 +131,23 @@ footer{
     a{
         text-decoration: none;
         &:hover{text-decoration: none;}
+    }
+}
+
+@media screen and (max-width: 1200px){
+    nav{
+        .navbar-collapse{
+            .menu__list{
+                .menu__item{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    .aktcii{
+        .aktcii-box{
+            padding: 90px 50px 0px;
+        }
     }
 }
 
@@ -112,7 +176,18 @@ footer{
             .menu__list{
                 .menu__item{
                     font-size: 15px;
+                    a{
+                        padding: 15px 10px;
+                    }
                 }
+            }
+        }
+    }
+    .aktcii{
+        .aktcii-box{
+            padding: 70px 50px 0px;
+            p{
+                font-size: 16px;
             }
         }
     }
@@ -147,7 +222,22 @@ footer{
                 flex-direction: column;
                 .menu__item{
                     font-size: 15px;
+                    a{line-height: 10px}
                 }
+            }
+        }
+    }
+    .aktcii{
+        .aktcii-background{
+            width: 10%;
+            background-size: 340%;
+        }
+        .aktcii-box{
+            width: 80%;
+            padding: 70px 20px 0px;
+            h3{font-size: 18px;}
+            p{
+                font-size: 13px;
             }
         }
     }
@@ -179,7 +269,21 @@ footer{
                 flex-direction: column;
                 .menu__item{
                     font-size: 15px;
+                    a{line-height: 5px;}
                 }
+            }
+        }
+    }
+    .aktcii{
+        height: 680px;
+        .aktcii-background{
+            background-size: 550%;
+        }
+        .aktcii-box{
+            padding: 50px 15px 0px;
+            h3{font-size: 14px;}
+            p{
+                font-size: 12px;
             }
         }
     }
